@@ -1,0 +1,23 @@
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.deps.json
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.dll
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.pdb
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.csproj.AssemblyReference.cache
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfoInputs.cache
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfo.cs
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.csproj.CoreCompileInputs.cache
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.dll
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/refint/EmploymentSystem.Domain.dll
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.pdb
+C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/ref/EmploymentSystem.Domain.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.deps.json
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/bin/Debug/net6.0/EmploymentSystem.Domain.pdb
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfoInputs.cache
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfo.cs
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.csproj.CoreCompileInputs.cache
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/refint/EmploymentSystem.Domain.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.pdb
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/ref/EmploymentSystem.Domain.dll
