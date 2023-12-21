@@ -9,19 +9,20 @@ using EmploymentSystem.Domain.Interfaces.Repositories;
 
 namespace EmploymentSystem.Infrastructure.Repositories
 {
-    public class UserRepository //: GenericRepository<User>, IUserRepository
+    public class UserRepository : GenericRepository<User>, IUserRepository
     {
-        // private readonly AppDbContext _context;
+        private readonly AppDbContext _context;
 
-        // public UserRepository(AppDbContext context) 
-        // {
-        //     _context = context;
-        // }
+        public UserRepository(AppDbContext context) :base(context)
+        {
+            _context = context;
+        }
+        public User GetUserByEmailAndPassword(string email, string password)
+        {
+            // Find the user by email and password
+            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
 
-        //     public User GetUserById(int userId)
-        //     {
-        //         // Implement logic to get a user by ID from the database
-        //         return _context.Users.Find(userId);
-        //     }
+            return user;
+        }
     }
 }

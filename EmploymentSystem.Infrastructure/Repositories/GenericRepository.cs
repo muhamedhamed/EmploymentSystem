@@ -13,11 +13,6 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         _dbContext = dbContext;
         _dbSet = dbContext.Set<TEntity>();
     }
-    public TEntity Add(TEntity entity)
-    {
-        _dbSet.Add(entity);
-        return entity;
-    }
 
     public IEnumerable<TEntity> GetAll()
     {
@@ -26,11 +21,19 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public TEntity GetById(string id)
     {
-
-#pragma warning disable CS8603 // Possible null reference return.
         return _dbSet.Find(id);
-#pragma warning restore CS8603 // Possible null reference return.
+    }
+    public TEntity Add(TEntity entity)
+    {
+        _dbSet.Add(entity);
+        return entity;
+    }
 
+    public TEntity Update(TEntity entity)
+    {
+        // _dbSet.Attach(entity);
+        _dbContext.Entry(entity).State = EntityState.Modified;
+        return entity;
     }
 
     public void Remove(TEntity entity)
@@ -41,12 +44,5 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
         _dbContext.Set<TEntity>().Remove(entity);
         // return true;
-    }
-
-    public TEntity Update(TEntity entity)
-    {
-        // _dbSet.Attach(entity);
-        _dbContext.Entry(entity).State = EntityState.Modified;
-        return entity;
     }
 }

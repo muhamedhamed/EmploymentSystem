@@ -14,24 +14,26 @@ namespace EmploymentSystem.Application.Services;
 
 public class UserService : IUserService
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork<User> _unitOfWork;
+      private readonly IUserRepository _userRepository;
     private readonly IMapper _mapper;
 
-    public UserService(IUnitOfWork unitOfWork, IMapper mapper)
+    public UserService(IUnitOfWork<User> unitOfWork, IMapper mapper,IUserRepository userRepository)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+        _userRepository = userRepository;
     }
 
     public UserDto GetUserById(string userId)
     {
-        var userEntity = _unitOfWork.UserRepository.GetById(userId);
+        var userEntity = _unitOfWork.Repository.GetById(userId);
         return _mapper.Map<UserDto>(userEntity);
     }
 
     public IEnumerable<UserDto> GetAllUsers()
     {
-        var usersEntities = _unitOfWork.UserRepository.GetAll();
+        var usersEntities = _unitOfWork.Repository.GetAll();
         return _mapper.Map<IEnumerable<UserDto>>(usersEntities);
     }
     public UserDto AddUser(UserDto userDto)
@@ -45,7 +47,7 @@ public class UserService : IUserService
     public UserDto UpdateUser(UserDto userDto, string userId)
     {
         // Ad more validation
-        var existingUserEntity = _unitOfWork.UserRepository.GetById(userId);
+        var existingUserEntity = _unitOfWork.Repository.GetById(userId);
         _mapper.Map(userDto, existingUserEntity);
         _unitOfWork.UserRepository.Update(existingUserEntity);
         _unitOfWork.SaveChanges();
@@ -56,22 +58,19 @@ public class UserService : IUserService
 
     public void DeleteUser(string userId)
     {
-        var userEntity = _unitOfWork.UserRepository.GetById(userId);
+        var userEntity = _unitOfWork.Repository.GetById(userId);
         if (userEntity != null)
         {
-            _unitOfWork.UserRepository.Remove(userEntity);
+            _unitOfWork.Repository.Remove(userEntity);
             _unitOfWork.SaveChanges();
         }
     }
 
-    // public UserDto GetUserByUsername(string username)
-    // {
-
-    // }
-
-    // public IEnumerable<UserDto> GetUsersByRole(UserRole role)
-    // {
-
-    // }
+    public UserDto GetUserByEmailAndPassword(string email, string password)
+    {
+        var userEntity = _unitOfWork.UserRepository.GetUserByEmailAndPassword(email,password);
+        // var userEntity = _userRepository.GetUserByEmailAndPassword(email,password);
+        return _mapper.Map<UserDto>(userEntity);
+    }
 }
 

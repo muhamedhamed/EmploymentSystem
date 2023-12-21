@@ -62,7 +62,7 @@ public class UserController : ControllerBase
         catch (Exception ex)
         {
             // Log the exception if needed
-             _logger.LogError($"Error while adding new user with Email :{userDto.Email}");
+            _logger.LogError($"Error while adding new user with Email :{userDto.Email}");
             return BadRequest();
         }
     }
@@ -81,5 +81,13 @@ public class UserController : ControllerBase
     {
         _userService.DeleteUser(userId);
         return NoContent();
+    }
+
+    [HttpGet,Route("login")]
+    public IActionResult GetUserByEmailAndPassword([FromBody] UserLoginDto userLoginDto)
+    {
+        var usersDto = _userService.GetUserByEmailAndPassword(userLoginDto.Email, userLoginDto.Password);
+        _logger.LogInformation($"User is returned.");
+        return Ok(usersDto);
     }
 }

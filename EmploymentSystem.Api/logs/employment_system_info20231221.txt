@@ -217,3 +217,882 @@ SELECT [i].[UserId] FROM @inserted0 i;
 2023-12-21 15:09:03.047 +02:00 [DBG] Connection id "0HN024MP8NA5C" disconnecting.
 2023-12-21 15:09:03.059 +02:00 [DBG] Connection id "0HN024MP8NA5C" stopped.
 2023-12-21 15:09:03.063 +02:00 [DBG] Connection id "0HN024MP8NA5C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 16:47:59.655 +02:00 [INF] Application is shutting down...
+2023-12-21 16:47:59.656 +02:00 [DBG] Hosting stopping
+2023-12-21 16:47:59.660 +02:00 [DBG] Hosting stopped
+2023-12-21 17:34:39.400 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-21 17:34:39.448 +02:00 [DBG] Hosting starting
+2023-12-21 17:34:39.508 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-21 17:34:39.516 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-21 17:34:39.516 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-21 17:34:39.516 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-21 17:34:39.517 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 17:34:39.517 +02:00 [INF] Hosting environment: Development
+2023-12-21 17:34:39.517 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-21 17:34:39.517 +02:00 [DBG] Hosting started
+2023-12-21 17:34:52.489 +02:00 [DBG] Connection id "0HN0279G304NR" received FIN.
+2023-12-21 17:34:52.497 +02:00 [DBG] Connection id "0HN0279G304NR" accepted.
+2023-12-21 17:34:52.497 +02:00 [DBG] Connection id "0HN0279G304NR" started.
+2023-12-21 17:34:52.498 +02:00 [DBG] Connection id "0HN0279G304NS" accepted.
+2023-12-21 17:34:52.498 +02:00 [DBG] Connection id "0HN0279G304NS" started.
+2023-12-21 17:34:52.500 +02:00 [DBG] Connection id "0HN0279G304NR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:34:52.506 +02:00 [DBG] Connection id "0HN0279G304NR" disconnecting.
+2023-12-21 17:34:52.506 +02:00 [DBG] Connection id "0HN0279G304NR" stopped.
+2023-12-21 17:34:52.519 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users - -
+2023-12-21 17:34:52.521 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-12-21 17:34:52.540 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:34:52.543 +02:00 [DBG] Https port '7211' discovered from server endpoints.
+2023-12-21 17:34:52.544 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users'.
+2023-12-21 17:34:52.545 +02:00 [DBG] Connection id "0HN0279G304NS" completed keep alive response.
+2023-12-21 17:34:52.546 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users - - - 307 0 - 29.9447ms
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NT" accepted.
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NT" received FIN.
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NU" accepted.
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NU" started.
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NT" started.
+2023-12-21 17:34:52.547 +02:00 [DBG] Connection id "0HN0279G304NT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:34:52.549 +02:00 [DBG] Connection id "0HN0279G304NT" disconnecting.
+2023-12-21 17:34:52.549 +02:00 [DBG] Connection id "0HN0279G304NT" stopped.
+2023-12-21 17:34:52.586 +02:00 [DBG] Connection 0HN0279G304NU established using the following protocol: "Tls12"
+2023-12-21 17:34:52.588 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users - -
+2023-12-21 17:34:52.588 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:34:52.601 +02:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2023-12-21 17:34:52.603 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)' with route pattern 'api/users' is valid for the request path '/api/users'
+2023-12-21 17:34:52.604 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:34:52.605 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:34:52.615 +02:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:34:52.616 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:34:52.616 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:34:52.616 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:34:52.616 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:34:52.616 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:34:52.616 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:34:52.662 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-12-21 17:34:52.940 +02:00 [WRN] No store type was specified for the decimal property 'Salary' on entity type 'Vacancy'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 17:34:53.007 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:34:53.045 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:34:53.063 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()'
+2023-12-21 17:34:53.125 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-12-21 17:34:53.138 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:34:53.151 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (10ms).
+2023-12-21 17:34:53.152 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:34:53.264 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:34:53.267 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 17:34:53.285 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 17:34:53.301 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.316 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:34:53.318 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:34:53.319 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:34:53.320 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:34:53.328 +02:00 [INF] All Users is returned.
+2023-12-21 17:34:53.329 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:34:53.330 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:34:53.330 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:34:53.330 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:34:53.330 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:34:53.330 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmploymentSystem.Application.Dtos.UserDto, EmploymentSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-21 17:34:53.374 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api) in 755.5939ms
+2023-12-21 17:34:53.374 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:34:53.374 +02:00 [DBG] Connection id "0HN0279G304NU" completed keep alive response.
+2023-12-21 17:34:53.375 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:34:53.376 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users - - - 200 - application/json;+charset=utf-8 787.7970ms
+2023-12-21 17:35:00.580 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807 - -
+2023-12-21 17:35:00.582 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:35:00.582 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807'.
+2023-12-21 17:35:00.583 +02:00 [DBG] Connection id "0HN0279G304NS" completed keep alive response.
+2023-12-21 17:35:00.583 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807 - - - 307 0 - 2.5285ms
+2023-12-21 17:35:00.585 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807 - -
+2023-12-21 17:35:00.585 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:35:00.587 +02:00 [DBG] 1 candidate(s) found for the request path '/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807'
+2023-12-21 17:35:00.587 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807'
+2023-12-21 17:35:00.588 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)'
+2023-12-21 17:35:00.588 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)'
+2023-12-21 17:35:00.602 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(System.String) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:35:00.602 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:35:00.602 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:35:00.602 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:35:00.602 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:35:00.602 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:35:00.602 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:35:00.625 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:35:00.625 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:35:00.627 +02:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2023-12-21 17:35:00.627 +02:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2023-12-21 17:35:00.627 +02:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2023-12-21 17:35:00.628 +02:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2023-12-21 17:35:00.628 +02:00 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2023-12-21 17:35:00.631 +02:00 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2023-12-21 17:35:00.644 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(e => EF.Property<string>(e, "UserId") == __p_0)'
+2023-12-21 17:35:00.677 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT TOP(1) u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u
+        WHERE u.UserId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2023-12-21 17:35:00.680 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:35:00.680 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-12-21 17:35:00.681 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:35:00.682 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:35:00.683 +02:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (Size = 36) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2023-12-21 17:35:00.697 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (Size = 36) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2023-12-21 17:35:00.697 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:35:00.698 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:35:00.698 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:35:00.698 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:35:00.699 +02:00 [INF] user with Id: 36A9F6EA-618F-48C3-9BB5-B34C8111F807 is found and returned
+2023-12-21 17:35:00.699 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:35:00.699 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:35:00.699 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:35:00.699 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:35:00.699 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:35:00.699 +02:00 [INF] Executing OkObjectResult, writing value of type 'EmploymentSystem.Application.Dtos.UserDto'.
+2023-12-21 17:35:00.700 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api) in 97.0882ms
+2023-12-21 17:35:00.700 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)'
+2023-12-21 17:35:00.700 +02:00 [DBG] Connection id "0HN0279G304NU" completed keep alive response.
+2023-12-21 17:35:00.700 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:35:00.700 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807 - - - 200 - application/json;+charset=utf-8 114.9028ms
+2023-12-21 17:37:11.623 +02:00 [DBG] Connection id "0HN0279G304NS" disconnecting.
+2023-12-21 17:37:11.624 +02:00 [DBG] Connection id "0HN0279G304NU" disconnecting.
+2023-12-21 17:37:11.625 +02:00 [DBG] Connection id "0HN0279G304NS" stopped.
+2023-12-21 17:37:11.625 +02:00 [DBG] Connection id "0HN0279G304NS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:37:11.626 +02:00 [DBG] Connection id "0HN0279G304NU" stopped.
+2023-12-21 17:37:11.626 +02:00 [DBG] Connection id "0HN0279G304NU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:43:23.605 +02:00 [INF] Application is shutting down...
+2023-12-21 17:43:23.606 +02:00 [DBG] Hosting stopping
+2023-12-21 17:43:23.613 +02:00 [DBG] Hosting stopped
+2023-12-21 17:48:11.491 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-21 17:48:11.542 +02:00 [DBG] Hosting starting
+2023-12-21 17:48:11.607 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-21 17:48:11.615 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-21 17:48:11.615 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-21 17:48:11.616 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-21 17:48:11.616 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 17:48:11.616 +02:00 [INF] Hosting environment: Development
+2023-12-21 17:48:11.616 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-21 17:48:11.616 +02:00 [DBG] Hosting started
+2023-12-21 17:49:21.865 +02:00 [DBG] Connection id "0HN027HJ60KL1" received FIN.
+2023-12-21 17:49:21.872 +02:00 [DBG] Connection id "0HN027HJ60KL1" accepted.
+2023-12-21 17:49:21.873 +02:00 [DBG] Connection id "0HN027HJ60KL1" started.
+2023-12-21 17:49:21.873 +02:00 [DBG] Connection id "0HN027HJ60KL2" accepted.
+2023-12-21 17:49:21.873 +02:00 [DBG] Connection id "0HN027HJ60KL2" started.
+2023-12-21 17:49:21.876 +02:00 [DBG] Connection id "0HN027HJ60KL1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:49:21.880 +02:00 [DBG] Connection id "0HN027HJ60KL1" disconnecting.
+2023-12-21 17:49:21.880 +02:00 [DBG] Connection id "0HN027HJ60KL1" stopped.
+2023-12-21 17:49:21.894 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/login application/json 62
+2023-12-21 17:49:21.896 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-12-21 17:49:21.913 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:49:21.915 +02:00 [DBG] Https port '7211' discovered from server endpoints.
+2023-12-21 17:49:21.916 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/login'.
+2023-12-21 17:49:21.917 +02:00 [DBG] Connection id "0HN027HJ60KL2" completed keep alive response.
+2023-12-21 17:49:21.918 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/login application/json 62 - 307 0 - 26.2812ms
+2023-12-21 17:49:21.918 +02:00 [DBG] Connection id "0HN027HJ60KL3" accepted.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL3" started.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL4" accepted.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL3" received FIN.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL4" started.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL2", Request id "0HN027HJ60KL2:00000002": started reading request body.
+2023-12-21 17:49:21.919 +02:00 [DBG] Connection id "0HN027HJ60KL2", Request id "0HN027HJ60KL2:00000002": done reading request body.
+2023-12-21 17:49:21.920 +02:00 [DBG] Connection id "0HN027HJ60KL3" disconnecting.
+2023-12-21 17:49:21.920 +02:00 [DBG] Connection id "0HN027HJ60KL3" stopped.
+2023-12-21 17:49:21.959 +02:00 [DBG] Connection 0HN027HJ60KL4 established using the following protocol: "Tls12"
+2023-12-21 17:49:21.960 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/login application/json 62
+2023-12-21 17:49:21.960 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:49:21.973 +02:00 [DBG] 2 candidate(s) found for the request path '/api/users/login'
+2023-12-21 17:49:21.976 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)' with route pattern 'api/users/login' is valid for the request path '/api/users/login'
+2023-12-21 17:49:21.976 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/login'
+2023-12-21 17:49:21.976 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:49:21.977 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:49:21.993 +02:00 [INF] Route matched with {action = "GetUserByEmailAndPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserByEmailAndPassword(EmploymentSystem.Application.Dtos.UserLoginDto) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:49:21.993 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:49:21.993 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:49:21.993 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:49:21.994 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:49:21.994 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:49:21.994 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:49:22.038 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-12-21 17:49:22.313 +02:00 [WRN] No store type was specified for the decimal property 'Salary' on entity type 'Vacancy'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 17:49:22.379 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:49:22.418 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:49:22.419 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:49:22.420 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' using the name '' in request data ...
+2023-12-21 17:49:22.420 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-12-21 17:49:22.448 +02:00 [DBG] Connection id "0HN027HJ60KL4", Request id "0HN027HJ60KL4:00000002": started reading request body.
+2023-12-21 17:49:22.448 +02:00 [DBG] Connection id "0HN027HJ60KL4", Request id "0HN027HJ60KL4:00000002": done reading request body.
+2023-12-21 17:49:22.455 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'EmploymentSystem.Application.Dtos.UserLoginDto'
+2023-12-21 17:49:22.456 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:49:22.456 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:49:22.456 +02:00 [DBG] Attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:49:22.458 +02:00 [DBG] Done attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:49:22.483 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .SingleOrDefault(u => u.Email == __email_0 && u.Password == __password_1)'
+2023-12-21 17:49:22.568 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT TOP(2) u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2023-12-21 17:49:22.584 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:49:22.596 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (10ms).
+2023-12-21 17:49:22.603 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:49:22.718 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:49:22.722 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:49:22.758 +02:00 [INF] Executed DbCommand (37ms) [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:49:22.775 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:49:22.791 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:49:22.792 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:49:22.793 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:49:22.797 +02:00 [INF] User is returned.
+2023-12-21 17:49:22.798 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:49:22.799 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:49:22.799 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:49:22.799 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:49:22.799 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:49:22.799 +02:00 [INF] Executing OkObjectResult, writing value of type 'EmploymentSystem.Application.Dtos.UserDto'.
+2023-12-21 17:49:22.816 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api) in 820.3111ms
+2023-12-21 17:49:22.816 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:49:22.816 +02:00 [DBG] Connection id "0HN027HJ60KL4" completed keep alive response.
+2023-12-21 17:49:22.817 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:49:22.818 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/login application/json 62 - 200 - application/json;+charset=utf-8 857.6358ms
+2023-12-21 17:51:32.759 +02:00 [DBG] Connection id "0HN027HJ60KL2" disconnecting.
+2023-12-21 17:51:32.760 +02:00 [DBG] Connection id "0HN027HJ60KL2" stopped.
+2023-12-21 17:51:32.760 +02:00 [DBG] Connection id "0HN027HJ60KL2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:51:33.762 +02:00 [DBG] Connection id "0HN027HJ60KL4" disconnecting.
+2023-12-21 17:51:33.765 +02:00 [DBG] Connection id "0HN027HJ60KL4" stopped.
+2023-12-21 17:51:33.766 +02:00 [DBG] Connection id "0HN027HJ60KL4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:54:12.415 +02:00 [INF] Application is shutting down...
+2023-12-21 17:54:12.416 +02:00 [DBG] Hosting stopping
+2023-12-21 17:54:12.422 +02:00 [DBG] Hosting stopped
+2023-12-21 17:54:17.991 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-21 17:54:18.039 +02:00 [DBG] Hosting starting
+2023-12-21 17:54:18.104 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-21 17:54:18.113 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-21 17:54:18.113 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-21 17:54:18.113 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-21 17:54:18.113 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 17:54:18.113 +02:00 [INF] Hosting environment: Development
+2023-12-21 17:54:18.113 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-21 17:54:18.113 +02:00 [DBG] Hosting started
+2023-12-21 17:54:29.408 +02:00 [DBG] Connection id "0HN027KEQVBNN" received FIN.
+2023-12-21 17:54:29.419 +02:00 [DBG] Connection id "0HN027KEQVBNN" accepted.
+2023-12-21 17:54:29.419 +02:00 [DBG] Connection id "0HN027KEQVBNN" started.
+2023-12-21 17:54:29.420 +02:00 [DBG] Connection id "0HN027KEQVBNO" accepted.
+2023-12-21 17:54:29.420 +02:00 [DBG] Connection id "0HN027KEQVBNO" started.
+2023-12-21 17:54:29.423 +02:00 [DBG] Connection id "0HN027KEQVBNN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:54:29.427 +02:00 [DBG] Connection id "0HN027KEQVBNN" disconnecting.
+2023-12-21 17:54:29.428 +02:00 [DBG] Connection id "0HN027KEQVBNN" stopped.
+2023-12-21 17:54:29.441 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/login application/json 62
+2023-12-21 17:54:29.443 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-12-21 17:54:29.462 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:29.465 +02:00 [DBG] Https port '7211' discovered from server endpoints.
+2023-12-21 17:54:29.466 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/login'.
+2023-12-21 17:54:29.467 +02:00 [DBG] Connection id "0HN027KEQVBNO" completed keep alive response.
+2023-12-21 17:54:29.469 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/login application/json 62 - 307 0 - 30.0810ms
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNO", Request id "0HN027KEQVBNO:00000002": started reading request body.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNO", Request id "0HN027KEQVBNO:00000002": done reading request body.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNP" accepted.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNP" started.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNQ" accepted.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNP" received FIN.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNQ" started.
+2023-12-21 17:54:29.470 +02:00 [DBG] Connection id "0HN027KEQVBNP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:54:29.471 +02:00 [DBG] Connection id "0HN027KEQVBNP" disconnecting.
+2023-12-21 17:54:29.472 +02:00 [DBG] Connection id "0HN027KEQVBNP" stopped.
+2023-12-21 17:54:29.514 +02:00 [DBG] Connection 0HN027KEQVBNQ established using the following protocol: "Tls12"
+2023-12-21 17:54:29.515 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/login application/json 62
+2023-12-21 17:54:29.516 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:29.529 +02:00 [DBG] 2 candidate(s) found for the request path '/api/users/login'
+2023-12-21 17:54:29.532 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)' with route pattern 'api/users/login' is valid for the request path '/api/users/login'
+2023-12-21 17:54:29.532 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/login'
+2023-12-21 17:54:29.532 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:29.533 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:29.549 +02:00 [INF] Route matched with {action = "GetUserByEmailAndPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserByEmailAndPassword(EmploymentSystem.Application.Dtos.UserLoginDto) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:54:29.549 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:54:29.549 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:54:29.549 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:54:29.550 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:54:29.550 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:54:29.550 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:29.594 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-12-21 17:54:29.864 +02:00 [WRN] No store type was specified for the decimal property 'Salary' on entity type 'Vacancy'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 17:54:29.931 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:54:29.974 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:29.976 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:54:29.976 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' using the name '' in request data ...
+2023-12-21 17:54:29.976 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-12-21 17:54:30.005 +02:00 [DBG] Connection id "0HN027KEQVBNQ", Request id "0HN027KEQVBNQ:00000002": started reading request body.
+2023-12-21 17:54:30.005 +02:00 [DBG] Connection id "0HN027KEQVBNQ", Request id "0HN027KEQVBNQ:00000002": done reading request body.
+2023-12-21 17:54:30.013 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'EmploymentSystem.Application.Dtos.UserLoginDto'
+2023-12-21 17:54:30.013 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:30.013 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:30.013 +02:00 [DBG] Attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:54:30.016 +02:00 [DBG] Done attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:30.041 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .SingleOrDefault(u => u.Email == __email_0 && u.Password == __password_1)'
+2023-12-21 17:54:30.128 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT TOP(2) u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2023-12-21 17:54:30.144 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:54:30.156 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (11ms).
+2023-12-21 17:54:30.164 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:30.276 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:30.281 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:54:30.303 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:54:30.319 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:30.335 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:54:30.336 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:30.338 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:30.342 +02:00 [INF] User is returned.
+2023-12-21 17:54:30.342 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:54:30.343 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:54:30.343 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:54:30.343 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:54:30.343 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:54:30.343 +02:00 [INF] Executing OkObjectResult, writing value of type 'EmploymentSystem.Application.Dtos.UserDto'.
+2023-12-21 17:54:30.362 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api) in 810.2681ms
+2023-12-21 17:54:30.362 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:30.362 +02:00 [DBG] Connection id "0HN027KEQVBNQ" completed keep alive response.
+2023-12-21 17:54:30.363 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:54:30.364 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/login application/json 62 - 200 - application/json;+charset=utf-8 848.4837ms
+2023-12-21 17:54:35.310 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users - -
+2023-12-21 17:54:35.311 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:35.311 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users'.
+2023-12-21 17:54:35.311 +02:00 [DBG] Connection id "0HN027KEQVBNO" completed keep alive response.
+2023-12-21 17:54:35.311 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users - - - 307 0 - 1.6225ms
+2023-12-21 17:54:35.314 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users - -
+2023-12-21 17:54:35.314 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:35.315 +02:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2023-12-21 17:54:35.316 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)' with route pattern 'api/users' is valid for the request path '/api/users'
+2023-12-21 17:54:35.316 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:54:35.316 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:54:35.317 +02:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:54:35.317 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:54:35.317 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:54:35.317 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:54:35.317 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:54:35.317 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:54:35.317 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:35.336 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:54:35.336 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:35.337 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()'
+2023-12-21 17:54:35.338 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-12-21 17:54:35.339 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:54:35.339 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-12-21 17:54:35.339 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:35.339 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:35.340 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 17:54:35.344 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 17:54:35.344 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:35.345 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:54:35.345 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:35.345 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:35.352 +02:00 [INF] All Users is returned.
+2023-12-21 17:54:35.353 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:54:35.353 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:54:35.353 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:54:35.353 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:54:35.353 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:54:35.353 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmploymentSystem.Application.Dtos.UserDto, EmploymentSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-21 17:54:35.358 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api) in 41.2546ms
+2023-12-21 17:54:35.358 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 17:54:35.359 +02:00 [DBG] Connection id "0HN027KEQVBNQ" completed keep alive response.
+2023-12-21 17:54:35.359 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:54:35.359 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users - - - 200 - application/json;+charset=utf-8 45.0794ms
+2023-12-21 17:54:46.903 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65
+2023-12-21 17:54:46.903 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:46.903 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/login'.
+2023-12-21 17:54:46.903 +02:00 [DBG] Connection id "0HN027KEQVBNO" completed keep alive response.
+2023-12-21 17:54:46.904 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65 - 307 0 - 0.6875ms
+2023-12-21 17:54:46.904 +02:00 [DBG] Connection id "0HN027KEQVBNO", Request id "0HN027KEQVBNO:00000004": started reading request body.
+2023-12-21 17:54:46.904 +02:00 [DBG] Connection id "0HN027KEQVBNO", Request id "0HN027KEQVBNO:00000004": done reading request body.
+2023-12-21 17:54:46.906 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65
+2023-12-21 17:54:46.906 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:54:46.907 +02:00 [DBG] 2 candidate(s) found for the request path '/api/users/login'
+2023-12-21 17:54:46.907 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)' with route pattern 'api/users/login' is valid for the request path '/api/users/login'
+2023-12-21 17:54:46.910 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/login'
+2023-12-21 17:54:46.910 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:46.912 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:46.912 +02:00 [INF] Route matched with {action = "GetUserByEmailAndPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserByEmailAndPassword(EmploymentSystem.Application.Dtos.UserLoginDto) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:54:46.913 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:54:46.913 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:54:46.913 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:54:46.913 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:54:46.914 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:54:46.914 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:46.927 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:54:46.928 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:54:46.928 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:54:46.928 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' using the name '' in request data ...
+2023-12-21 17:54:46.928 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-12-21 17:54:46.929 +02:00 [DBG] Connection id "0HN027KEQVBNQ", Request id "0HN027KEQVBNQ:00000004": started reading request body.
+2023-12-21 17:54:46.929 +02:00 [DBG] Connection id "0HN027KEQVBNQ", Request id "0HN027KEQVBNQ:00000004": done reading request body.
+2023-12-21 17:54:46.929 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'EmploymentSystem.Application.Dtos.UserLoginDto'
+2023-12-21 17:54:46.929 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:46.929 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:46.929 +02:00 [DBG] Attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:54:46.929 +02:00 [DBG] Done attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:54:46.931 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:54:46.931 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-12-21 17:54:46.931 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:46.931 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:46.931 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:54:46.935 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:54:46.935 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:46.935 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:54:46.935 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:54:46.935 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:46.935 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:54:46.936 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api) in 22.462ms
+2023-12-21 17:54:46.936 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:54:46.937 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method8(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at EmploymentSystem.Infrastructure.Repositories.UserRepository.GetUserByEmailAndPassword(String email, String password) in /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/Repositories/UserRepository.cs:line 23
+   at EmploymentSystem.Application.Services.UserService.GetUserByEmailAndPassword(String email, String password) in /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/Services/UserService.cs:line 71
+   at EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword(UserLoginDto userLoginDto) in /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/Controllers/UserController.cs:line 89
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-12-21 17:54:46.947 +02:00 [DBG] Connection id "0HN027KEQVBNQ" completed keep alive response.
+2023-12-21 17:54:46.947 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:54:46.947 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65 - 500 - text/plain;+charset=utf-8 41.3514ms
+2023-12-21 17:55:31.313 +02:00 [INF] Application is shutting down...
+2023-12-21 17:55:31.314 +02:00 [DBG] Hosting stopping
+2023-12-21 17:55:31.325 +02:00 [DBG] Connection id "0HN027KEQVBNQ" disconnecting.
+2023-12-21 17:55:31.326 +02:00 [DBG] Connection id "0HN027KEQVBNO" disconnecting.
+2023-12-21 17:55:31.326 +02:00 [DBG] Connection id "0HN027KEQVBNO" stopped.
+2023-12-21 17:55:31.326 +02:00 [DBG] Connection id "0HN027KEQVBNO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:55:31.326 +02:00 [DBG] Connection id "0HN027KEQVBNQ" stopped.
+2023-12-21 17:55:31.327 +02:00 [DBG] Connection id "0HN027KEQVBNQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:55:31.329 +02:00 [DBG] Hosting stopped
+2023-12-21 17:55:37.379 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-21 17:55:37.429 +02:00 [DBG] Hosting starting
+2023-12-21 17:55:37.490 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-21 17:55:37.498 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-21 17:55:37.498 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-21 17:55:37.499 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-21 17:55:37.499 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 17:55:37.499 +02:00 [INF] Hosting environment: Development
+2023-12-21 17:55:37.499 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-21 17:55:37.499 +02:00 [DBG] Hosting started
+2023-12-21 17:55:49.975 +02:00 [DBG] Connection id "0HN027L6RADGN" received FIN.
+2023-12-21 17:55:49.985 +02:00 [DBG] Connection id "0HN027L6RADGN" accepted.
+2023-12-21 17:55:49.985 +02:00 [DBG] Connection id "0HN027L6RADGN" started.
+2023-12-21 17:55:49.986 +02:00 [DBG] Connection id "0HN027L6RADGO" accepted.
+2023-12-21 17:55:49.986 +02:00 [DBG] Connection id "0HN027L6RADGO" started.
+2023-12-21 17:55:49.989 +02:00 [DBG] Connection id "0HN027L6RADGN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:55:49.993 +02:00 [DBG] Connection id "0HN027L6RADGN" disconnecting.
+2023-12-21 17:55:49.994 +02:00 [DBG] Connection id "0HN027L6RADGN" stopped.
+2023-12-21 17:55:50.010 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65
+2023-12-21 17:55:50.012 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-12-21 17:55:50.032 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:55:50.035 +02:00 [DBG] Https port '7211' discovered from server endpoints.
+2023-12-21 17:55:50.036 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/login'.
+2023-12-21 17:55:50.037 +02:00 [DBG] Connection id "0HN027L6RADGO" completed keep alive response.
+2023-12-21 17:55:50.038 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65 - 307 0 - 30.3857ms
+2023-12-21 17:55:50.038 +02:00 [DBG] Connection id "0HN027L6RADGP" received FIN.
+2023-12-21 17:55:50.038 +02:00 [DBG] Connection id "0HN027L6RADGQ" accepted.
+2023-12-21 17:55:50.038 +02:00 [DBG] Connection id "0HN027L6RADGQ" started.
+2023-12-21 17:55:50.038 +02:00 [DBG] Connection id "0HN027L6RADGP" accepted.
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGP" started.
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGO", Request id "0HN027L6RADGO:00000002": started reading request body.
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGP" disconnecting.
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGO", Request id "0HN027L6RADGO:00000002": done reading request body.
+2023-12-21 17:55:50.039 +02:00 [DBG] Connection id "0HN027L6RADGP" stopped.
+2023-12-21 17:55:50.076 +02:00 [DBG] Connection 0HN027L6RADGQ established using the following protocol: "Tls12"
+2023-12-21 17:55:50.078 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65
+2023-12-21 17:55:50.078 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 17:55:50.091 +02:00 [DBG] 2 candidate(s) found for the request path '/api/users/login'
+2023-12-21 17:55:50.093 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)' with route pattern 'api/users/login' is valid for the request path '/api/users/login'
+2023-12-21 17:55:50.094 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/login'
+2023-12-21 17:55:50.094 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:55:50.095 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:55:50.111 +02:00 [INF] Route matched with {action = "GetUserByEmailAndPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserByEmailAndPassword(EmploymentSystem.Application.Dtos.UserLoginDto) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 17:55:50.111 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 17:55:50.111 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 17:55:50.111 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 17:55:50.111 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 17:55:50.112 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 17:55:50.112 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:55:50.158 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-12-21 17:55:50.437 +02:00 [WRN] No store type was specified for the decimal property 'Salary' on entity type 'Vacancy'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 17:55:50.503 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 17:55:50.542 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 17:55:50.543 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:55:50.544 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' using the name '' in request data ...
+2023-12-21 17:55:50.544 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-12-21 17:55:50.572 +02:00 [DBG] Connection id "0HN027L6RADGQ", Request id "0HN027L6RADGQ:00000002": started reading request body.
+2023-12-21 17:55:50.572 +02:00 [DBG] Connection id "0HN027L6RADGQ", Request id "0HN027L6RADGQ:00000002": done reading request body.
+2023-12-21 17:55:50.579 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'EmploymentSystem.Application.Dtos.UserLoginDto'
+2023-12-21 17:55:50.580 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:55:50.580 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:55:50.580 +02:00 [DBG] Attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 17:55:50.582 +02:00 [DBG] Done attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 17:55:50.607 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(u => u.Email == __email_0 && u.Password == __password_1)'
+2023-12-21 17:55:50.693 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT TOP(1) u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2023-12-21 17:55:50.709 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 17:55:50.722 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (11ms).
+2023-12-21 17:55:50.729 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:55:50.842 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:55:50.846 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:55:50.877 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 17:55:50.895 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 17:55:50.911 +02:00 [DBG] A data reader was disposed.
+2023-12-21 17:55:50.912 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:55:50.914 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 17:55:50.918 +02:00 [INF] User is returned.
+2023-12-21 17:55:50.919 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 17:55:50.919 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 17:55:50.919 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 17:55:50.919 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 17:55:50.920 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 17:55:50.920 +02:00 [INF] Executing OkObjectResult, writing value of type 'EmploymentSystem.Application.Dtos.UserDto'.
+2023-12-21 17:55:50.937 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api) in 823.6172ms
+2023-12-21 17:55:50.938 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 17:55:50.938 +02:00 [DBG] Connection id "0HN027L6RADGQ" completed keep alive response.
+2023-12-21 17:55:50.938 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 17:55:50.939 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65 - 200 - application/json;+charset=utf-8 861.7358ms
+2023-12-21 17:58:00.592 +02:00 [DBG] Connection id "0HN027L6RADGO" disconnecting.
+2023-12-21 17:58:00.593 +02:00 [DBG] Connection id "0HN027L6RADGO" stopped.
+2023-12-21 17:58:00.594 +02:00 [DBG] Connection id "0HN027L6RADGO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 17:58:01.597 +02:00 [DBG] Connection id "0HN027L6RADGQ" disconnecting.
+2023-12-21 17:58:01.601 +02:00 [DBG] Connection id "0HN027L6RADGQ" stopped.
+2023-12-21 17:58:01.601 +02:00 [DBG] Connection id "0HN027L6RADGQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 18:04:19.202 +02:00 [INF] Application is shutting down...
+2023-12-21 18:04:19.204 +02:00 [DBG] Hosting stopping
+2023-12-21 18:04:19.211 +02:00 [DBG] Hosting stopped
+2023-12-21 18:09:29.973 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-21 18:09:30.020 +02:00 [DBG] Hosting starting
+2023-12-21 18:09:30.081 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-21 18:09:30.089 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-21 18:09:30.089 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-21 18:09:30.089 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-21 18:09:30.089 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 18:09:30.090 +02:00 [INF] Hosting environment: Development
+2023-12-21 18:09:30.090 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-21 18:09:30.090 +02:00 [DBG] Hosting started
+2023-12-21 18:09:43.490 +02:00 [DBG] Connection id "0HN027SV8AVVH" received FIN.
+2023-12-21 18:09:43.499 +02:00 [DBG] Connection id "0HN027SV8AVVH" accepted.
+2023-12-21 18:09:43.499 +02:00 [DBG] Connection id "0HN027SV8AVVH" started.
+2023-12-21 18:09:43.500 +02:00 [DBG] Connection id "0HN027SV8AVVI" accepted.
+2023-12-21 18:09:43.500 +02:00 [DBG] Connection id "0HN027SV8AVVI" started.
+2023-12-21 18:09:43.502 +02:00 [DBG] Connection id "0HN027SV8AVVH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 18:09:43.506 +02:00 [DBG] Connection id "0HN027SV8AVVH" disconnecting.
+2023-12-21 18:09:43.507 +02:00 [DBG] Connection id "0HN027SV8AVVH" stopped.
+2023-12-21 18:09:43.519 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65
+2023-12-21 18:09:43.522 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-12-21 18:09:43.543 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 18:09:43.546 +02:00 [DBG] Https port '7211' discovered from server endpoints.
+2023-12-21 18:09:43.548 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users/login'.
+2023-12-21 18:09:43.549 +02:00 [DBG] Connection id "0HN027SV8AVVI" completed keep alive response.
+2023-12-21 18:09:43.550 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users/login application/json 65 - 307 0 - 32.4903ms
+2023-12-21 18:09:43.550 +02:00 [DBG] Connection id "0HN027SV8AVVJ" accepted.
+2023-12-21 18:09:43.550 +02:00 [DBG] Connection id "0HN027SV8AVVJ" received FIN.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVJ" started.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVK" accepted.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVJ" disconnecting.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVK" started.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVI", Request id "0HN027SV8AVVI:00000002": started reading request body.
+2023-12-21 18:09:43.551 +02:00 [DBG] Connection id "0HN027SV8AVVI", Request id "0HN027SV8AVVI:00000002": done reading request body.
+2023-12-21 18:09:43.552 +02:00 [DBG] Connection id "0HN027SV8AVVJ" stopped.
+2023-12-21 18:09:43.591 +02:00 [DBG] Connection 0HN027SV8AVVK established using the following protocol: "Tls12"
+2023-12-21 18:09:43.592 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65
+2023-12-21 18:09:43.593 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 18:09:43.605 +02:00 [DBG] 2 candidate(s) found for the request path '/api/users/login'
+2023-12-21 18:09:43.607 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)' with route pattern 'api/users/login' is valid for the request path '/api/users/login'
+2023-12-21 18:09:43.607 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserById (EmploymentSystem.Api)' with route pattern 'api/users/{userId}' is valid for the request path '/api/users/login'
+2023-12-21 18:09:43.607 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 18:09:43.608 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 18:09:43.623 +02:00 [INF] Route matched with {action = "GetUserByEmailAndPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserByEmailAndPassword(EmploymentSystem.Application.Dtos.UserLoginDto) on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 18:09:43.624 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 18:09:43.624 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 18:09:43.624 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 18:09:43.624 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 18:09:43.624 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 18:09:43.624 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 18:09:43.668 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-12-21 18:09:43.939 +02:00 [WRN] No store type was specified for the decimal property 'Salary' on entity type 'Vacancy'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 18:09:44.006 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 18:09:44.046 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 18:09:44.047 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 18:09:44.048 +02:00 [DBG] Attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' using the name '' in request data ...
+2023-12-21 18:09:44.048 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-12-21 18:09:44.075 +02:00 [DBG] Connection id "0HN027SV8AVVK", Request id "0HN027SV8AVVK:00000002": started reading request body.
+2023-12-21 18:09:44.076 +02:00 [DBG] Connection id "0HN027SV8AVVK", Request id "0HN027SV8AVVK:00000002": done reading request body.
+2023-12-21 18:09:44.083 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'EmploymentSystem.Application.Dtos.UserLoginDto'
+2023-12-21 18:09:44.083 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 18:09:44.084 +02:00 [DBG] Done attempting to bind parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 18:09:44.084 +02:00 [DBG] Attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto' ...
+2023-12-21 18:09:44.086 +02:00 [DBG] Done attempting to validate the bound parameter 'userLoginDto' of type 'EmploymentSystem.Application.Dtos.UserLoginDto'.
+2023-12-21 18:09:44.111 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(u => u.Email == __email_0 && u.Password == __password_1)'
+2023-12-21 18:09:44.197 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT TOP(1) u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2023-12-21 18:09:44.213 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 18:09:44.225 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (11ms).
+2023-12-21 18:09:44.232 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:44.348 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:44.353 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 18:09:44.382 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[@__email_0='?' (Size = 255), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2023-12-21 18:09:44.398 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:44.415 +02:00 [DBG] A data reader was disposed.
+2023-12-21 18:09:44.415 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:44.417 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:44.421 +02:00 [INF] User is returned.
+2023-12-21 18:09:44.422 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 18:09:44.422 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 18:09:44.422 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 18:09:44.422 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 18:09:44.423 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 18:09:44.423 +02:00 [INF] Executing OkObjectResult, writing value of type 'EmploymentSystem.Application.Dtos.UserDto'.
+2023-12-21 18:09:44.440 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api) in 813.7559ms
+2023-12-21 18:09:44.440 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetUserByEmailAndPassword (EmploymentSystem.Api)'
+2023-12-21 18:09:44.440 +02:00 [DBG] Connection id "0HN027SV8AVVK" completed keep alive response.
+2023-12-21 18:09:44.441 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 18:09:44.442 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users/login application/json 65 - 200 - application/json;+charset=utf-8 849.7197ms
+2023-12-21 18:09:47.075 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5026/api/users - -
+2023-12-21 18:09:47.076 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 18:09:47.077 +02:00 [DBG] Redirecting to 'https://localhost:7211/api/users'.
+2023-12-21 18:09:47.077 +02:00 [DBG] Connection id "0HN027SV8AVVI" completed keep alive response.
+2023-12-21 18:09:47.077 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5026/api/users - - - 307 0 - 2.3563ms
+2023-12-21 18:09:47.080 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/users - -
+2023-12-21 18:09:47.080 +02:00 [DBG] The request path  does not match the path filter
+2023-12-21 18:09:47.082 +02:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2023-12-21 18:09:47.082 +02:00 [DBG] Endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)' with route pattern 'api/users' is valid for the request path '/api/users'
+2023-12-21 18:09:47.083 +02:00 [DBG] Request matched endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 18:09:47.083 +02:00 [INF] Executing endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 18:09:47.087 +02:00 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsers() on controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api).
+2023-12-21 18:09:47.087 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-12-21 18:09:47.087 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-12-21 18:09:47.087 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-12-21 18:09:47.087 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-12-21 18:09:47.087 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-12-21 18:09:47.087 +02:00 [DBG] Executing controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 18:09:47.109 +02:00 [INF] Entity Framework Core 6.0.25 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-21 18:09:47.109 +02:00 [DBG] Executed controller factory for controller EmploymentSystem.Api.Controllers.UserController (EmploymentSystem.Api)
+2023-12-21 18:09:47.110 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()'
+2023-12-21 18:09:47.112 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (string) Required PK AfterSave:Throw ValueGenerated.OnAdd MaxLength(36) Ansi, 0], [Property: User.CreatedAt (DateTime) Required, 1], [Property: User.Email (string) Required MaxLength(255), 2], [Property: User.FirstName (string) Required, 3], [Property: User.IsActive (bool) Required, 4], [Property: User.LastName (string) Required, 5], [Property: User.Password (string) Required, 6], [Property: User.PhoneNumber (string) Required, 7], [Property: User.Role (UserRole) Required, 8], [Property: User.UpdatedAt (DateTime) Required, 9], [Property: User.Username (string) Required MaxLength(255), 10] }
+        SELECT u.UserId, u.CreatedAt, u.Email, u.FirstName, u.IsActive, u.LastName, u.Password, u.PhoneNumber, u.Role, u.UpdatedAt, u.Username
+        FROM Users AS u), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    EmploymentSystem.Infrastructure.AppDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-12-21 18:09:47.112 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-12-21 18:09:47.112 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-12-21 18:09:47.112 +02:00 [DBG] Opening connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:47.113 +02:00 [DBG] Opened connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:47.113 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 18:09:47.119 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[IsActive], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+2023-12-21 18:09:47.119 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.119 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.119 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.119 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.120 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.120 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.120 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.120 +02:00 [DBG] Context 'AppDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-12-21 18:09:47.120 +02:00 [DBG] A data reader was disposed.
+2023-12-21 18:09:47.120 +02:00 [DBG] Closing connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:47.120 +02:00 [DBG] Closed connection to database 'EmploymentDB' on server '127.0.0.1,1433'.
+2023-12-21 18:09:47.127 +02:00 [INF] All Users is returned.
+2023-12-21 18:09:47.127 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-12-21 18:09:47.128 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-12-21 18:09:47.128 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-12-21 18:09:47.128 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-12-21 18:09:47.128 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-12-21 18:09:47.128 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmploymentSystem.Application.Dtos.UserDto, EmploymentSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-21 18:09:47.134 +02:00 [INF] Executed action EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api) in 46.1518ms
+2023-12-21 18:09:47.134 +02:00 [INF] Executed endpoint 'EmploymentSystem.Api.Controllers.UserController.GetAllUsers (EmploymentSystem.Api)'
+2023-12-21 18:09:47.134 +02:00 [DBG] Connection id "0HN027SV8AVVK" completed keep alive response.
+2023-12-21 18:09:47.134 +02:00 [DBG] 'AppDbContext' disposed.
+2023-12-21 18:09:47.134 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/users - - - 200 - application/json;+charset=utf-8 53.8583ms
