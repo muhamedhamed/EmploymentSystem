@@ -36,6 +36,8 @@ Articles That I explore also for knowledge and info about clean architecture
 **DB used is MS SQL server**
 **Simple clean architecture is applied**
 **Serilog is used as Logger**
+**Added JWt Token-Based Authentication**
+**Added Authorization Role of Type RBAC**
 
 After I create the solution and projects structure, My Laptop is Broken and shutdown (Motherboard of the laptob is Broken)So I continue my work on Mac OS and that add some hard work on me:
 - First I need to have SQL Server DB so I configure the Docker Version of SQL Server and use Azure Data Studio on Mac Device as GUI Interface to work with figure and see the Database.
@@ -44,9 +46,9 @@ After I create the solution and projects structure, My Laptop is Broken and shut
 - May I take some more time to finish some of Business Cases but at the end is Demo and open for Improvements and Updates.
 
 To Run the Project:
-1- Need to use VS Code as it created and configured on VS Code, Will work on Visual Studio Also but may need some additional minner fixes.
-2- Use SQL Server or SQl Serve on Docker and update the Conncection String,run database update command to get new created database.
-3- Use Postman as API Documentation or Swagger as it configured with Swagger UI.
-4- Additional Apis is created as it as mentioned was first time for me to create that structure so I was want to work will some generic Apis first before go into the business need.
+- Need to use VS Code as it created and configured on VS Code, Will work on Visual Studio Also but may need some additional minner fixes.
+- Use SQL Server or SQl Serve on Docker and update the Conncection String,run database update command to get new created database.
+- Use Postman as API Documentation or Swagger as it configured with Swagger UI.
+- Additional Apis is created as it as mentioned was first time for me to create that structure so I was want to work will some generic Apis first before go into the business need.
 
 I will add some fixes on the project and work on some business requirement in the task but I as I told you before.
