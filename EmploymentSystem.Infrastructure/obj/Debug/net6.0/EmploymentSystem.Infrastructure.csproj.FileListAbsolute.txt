@@ -24,6 +24,7 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Infrastruct
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.AssemblyInfoInputs.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.AssemblyInfo.cs
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.csproj.CoreCompileInputs.cache
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.sourcelink.json
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.csproj.CopyComplete
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/EmploymentSystem.Infrastructure.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Infrastructure/obj/Debug/net6.0/refint/EmploymentSystem.Infrastructure.dll

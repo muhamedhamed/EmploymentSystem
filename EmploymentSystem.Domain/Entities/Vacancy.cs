@@ -9,7 +9,7 @@ namespace EmploymentSystem.Domain.Entities
 {
     public class Vacancy:Base
     {
-        public int VacancyId { get; set; }
+        public string VacancyId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Salary { get; set; }
@@ -19,7 +19,7 @@ namespace EmploymentSystem.Domain.Entities
         public bool IsExpired { get; set; } // Check the vacancy existance or not
 
         // Navigation properties
-        public int EmployerId { get; set; } // Foreign key
+        public string EmployerId { get; set; } // Foreign key
         public User Employer { get; set; } // Navigation property
 
         public ICollection<ApplicationVacancy> Applications { get; set; }

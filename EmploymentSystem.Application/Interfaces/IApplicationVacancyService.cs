@@ -4,10 +4,10 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IApplicationVacancyService
 {
-    void ApplyForVacancy(ApplicationVacancyDto applicationDto);
-    ApplicationVacancyDto GetApplicationById(int applicationId);
-    void UpdateApplication(ApplicationVacancyDto applicationDto);
-    void WithdrawApplication(int applicationId);
+    ApplicationVacancyDto GetApplicationById(string applicationId);
+    ApplicationVacancyDto ApplyForVacancy(ApplicationVacancyDto applicationDto);
+    ApplicationVacancyDto UpdateApplication(ApplicationVacancyDto applicationDto,string applicationId);
+    void WithdrawApplication(string applicationId);
 
     // IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(int vacancyId);
     // IEnumerable<ApplicationVacancyDto> GetApplicationsByApplicant(int applicantId);

@@ -4,11 +4,11 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IVacancyService
 {
-    void CreateVacancy(VacancyDto vacancy);
-    VacancyDto GetVacancyById(int vacancyId);
+    VacancyDto GetVacancyById(string vacancyId);
     IEnumerable<VacancyDto> GetAllVacancies();
-    void UpdateVacancy(VacancyDto vacancyDto);
-    void DeleteVacancy(int vacancyId);
+    VacancyDto CreateVacancy(VacancyDto vacancy);
+    VacancyDto UpdateVacancy(VacancyDto vacancyDto,string vacancyId);
+    void DeleteVacancy(string vacancyId);
     // IEnumerable<VacancyDto> GetActiveVacancies();
     // IEnumerable<VacancyDto> GetVacanciesByEmployer(int employerId);
     // // Other methods related to vacancy management...

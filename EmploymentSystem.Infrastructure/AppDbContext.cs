@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmploymentSystem.Domain.Entities;
+using EmploymentSystem.Infrastructure.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmploymentSystem.Infrastructure
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext()
+        {
+
+        }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
@@ -26,6 +31,15 @@ namespace EmploymentSystem.Infrastructure
         public DbSet<User> Users { get; set; }
         public DbSet<Vacancy> Vacancies { get; set; }
         public DbSet<ApplicationVacancy> ApplicationVacancies { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new VacancyConfiguration());
+            modelBuilder.ApplyConfiguration(new ApplicationVacancyConfiguration());
+        }
     }
 }
 

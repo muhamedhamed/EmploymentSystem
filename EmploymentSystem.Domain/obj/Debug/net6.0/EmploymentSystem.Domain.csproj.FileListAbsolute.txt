@@ -17,6 +17,7 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Domain/obj/
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfoInputs.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.AssemblyInfo.cs
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.csproj.CoreCompileInputs.cache
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.sourcelink.json
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/refint/EmploymentSystem.Domain.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Domain/obj/Debug/net6.0/EmploymentSystem.Domain.pdb

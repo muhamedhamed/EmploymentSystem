@@ -1,61 +1,70 @@
 ﻿using EmploymentSystem.Application.Dtos;
 using EmploymentSystem.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmploymentSystem.Api.Controllers;
 
-    [ApiController]
-    [Route("api/vacancies")]
-    public class VacancyController : ControllerBase
+[ApiController]
+[Route("api/vacancies")]
+// [Authorize(Roles = "Employer")]
+public class VacancyController : ControllerBase
+{
+    private readonly IVacancyService _vacancyService;
+
+    public VacancyController(IVacancyService vacancyService)
     {
-       private readonly IVacancyService _vacancyService;
+        _vacancyService = vacancyService;
+    }
 
-        public VacancyController(IVacancyService vacancyService)
+    [HttpGet("{vacancyId}")]
+    public IActionResult GetVacancyById(string vacancyId)
+    {
+        var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
+        if (vacancyDto == null)
         {
-            _vacancyService = vacancyService;
+            return NotFound();
         }
+        return Ok(vacancyDto);
+    }
 
-        [HttpGet("{vacancyId}")]
-        public IActionResult GetVacancyById(int vacancyId)
+    [HttpGet]
+    public IActionResult GetAllVacancies()
+    {
+        var vacanciesDto = _vacancyService.GetAllVacancies();
+        return Ok(vacanciesDto);
+    }
+
+    [HttpPost]
+    public IActionResult CreateVacancy([FromBody] VacancyDto vacancyDto)
+    {
+        try
         {
-            var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
-            if (vacancyDto == null)
-            {
-                return NotFound();
-            }
-            return Ok(vacancyDto);
+            var result =_vacancyService.CreateVacancy(vacancyDto);
+            return CreatedAtAction(nameof(GetVacancyById), new { result.EmployerId }, vacancyDto);
         }
-
-        [HttpGet]
-        public IActionResult GetAllVacancies()
+        catch (Exception ex)
         {
-            var vacanciesDto = _vacancyService.GetAllVacancies();
-            return Ok(vacanciesDto);
-        }
+            // Log the exception if needed
+            return BadRequest();
 
-        [HttpPost]
-        public IActionResult CreateVacancy([FromBody] VacancyDto vacancyDto)
-        {
-            _vacancyService.CreateVacancy(vacancyDto);
-            return CreatedAtAction(nameof(GetVacancyById), new { vacancyId = vacancyDto.VacancyId }, vacancyDto);
+            // Throw an exception to indicate failure
+            throw new Exception("Failed to add vacancy: " + ex.Message);
         }
+    }
 
-        [HttpPut("{vacancyId}")]
-        public IActionResult UpdateVacancy(int vacancyId, [FromBody] VacancyDto vacancyDto)
-        {
-            if (vacancyId != vacancyDto.VacancyId)
-            {
-                return BadRequest();
-            }
+    [HttpPut("{vacancyId}")]
+    public IActionResult UpdateVacancy(string vacancyId, [FromBody] VacancyDto vacancyDto)
+    {
+        //need to add check for the existance of the vacancy
+        _vacancyService.UpdateVacancy(vacancyDto,vacancyId);
+        return NoContent();
+    }
 
-            _vacancyService.UpdateVacancy(vacancyDto);
-            return NoContent();
-        }
-
-        [HttpDelete("{vacancyId}")]
-        public IActionResult DeleteVacancy(int vacancyId)
-        {
-            _vacancyService.DeleteVacancy(vacancyId);
-            return NoContent();
-        }
+    [HttpDelete("{vacancyId}")]
+    public IActionResult DeleteVacancy(string vacancyId)
+    {
+        _vacancyService.DeleteVacancy(vacancyId);
+        return NoContent();
+    }
 }

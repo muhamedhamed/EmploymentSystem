@@ -23,7 +23,7 @@ public class UserService : IUserService
         _mapper = mapper;
     }
 
-    public UserDto GetUserById(int userId)
+    public UserDto GetUserById(string userId)
     {
         var userEntity = _unitOfWork.UserRepository.GetById(userId);
         return _mapper.Map<UserDto>(userEntity);
@@ -34,26 +34,27 @@ public class UserService : IUserService
         var usersEntities = _unitOfWork.UserRepository.GetAll();
         return _mapper.Map<IEnumerable<UserDto>>(usersEntities);
     }
-    public void AddUser(UserDto userDto)
+    public UserDto AddUser(UserDto userDto)
     {
         var userEntity = _mapper.Map<User>(userDto);
         _unitOfWork.UserRepository.Add(userEntity);
         _unitOfWork.SaveChanges();
+        return userDto;
     }
 
-    public void UpdateUser(UserDto userDto)
+    public UserDto UpdateUser(UserDto userDto, string userId)
     {
-        var existingUserEntity = _unitOfWork.UserRepository.GetById(userDto.UserId);
-        if (existingUserEntity != null)
-        {
-            _mapper.Map(userDto, existingUserEntity);
-            _unitOfWork.UserRepository.Update(existingUserEntity);
-            _unitOfWork.SaveChanges();
-        }
+        // Ad more validation
+        var existingUserEntity = _unitOfWork.UserRepository.GetById(userId);
+        _mapper.Map(userDto, existingUserEntity);
+        _unitOfWork.UserRepository.Update(existingUserEntity);
+        _unitOfWork.SaveChanges();
+
+        return _mapper.Map<UserDto>(existingUserEntity);
         // Handle case when the user doesn't exist or other business logic.
     }
 
-    public void DeleteUser(int userId)
+    public void DeleteUser(string userId)
     {
         var userEntity = _unitOfWork.UserRepository.GetById(userId);
         if (userEntity != null)
@@ -61,7 +62,6 @@ public class UserService : IUserService
             _unitOfWork.UserRepository.Remove(userEntity);
             _unitOfWork.SaveChanges();
         }
-        // Handle case when the user doesn't exist or other business logic.
     }
 
     // public UserDto GetUserByUsername(string username)

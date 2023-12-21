@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmploymentSystem.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231220163720_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20231221031235_ThirdUpdate")]
+    partial class ThirdUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,14 +26,14 @@ namespace EmploymentSystem.Infrastructure.Migrations
 
             modelBuilder.Entity("EmploymentSystem.Domain.Entities.ApplicationVacancy", b =>
                 {
-                    b.Property<int>("ApplicationVacancyId")
+                    b.Property<string>("ApplicationVacancyId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValueSql("NEWID()");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApplicationVacancyId"), 1L, 1);
-
-                    b.Property<int>("ApplicantId")
-                        .HasColumnType("int");
+                    b.Property<string>("ApplicantId")
+                        .IsRequired()
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -44,8 +44,9 @@ namespace EmploymentSystem.Infrastructure.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("VacancyId")
-                        .HasColumnType("int");
+                    b.Property<string>("VacancyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ApplicationVacancyId");
 
@@ -58,18 +59,20 @@ namespace EmploymentSystem.Infrastructure.Migrations
 
             modelBuilder.Entity("EmploymentSystem.Domain.Entities.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<string>("UserId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+                        .HasMaxLength(36)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(36)")
+                        .HasDefaultValueSql("NEWID()");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -98,7 +101,8 @@ namespace EmploymentSystem.Infrastructure.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("UserId");
 
@@ -107,11 +111,10 @@ namespace EmploymentSystem.Infrastructure.Migrations
 
             modelBuilder.Entity("EmploymentSystem.Domain.Entities.Vacancy", b =>
                 {
-                    b.Property<int>("VacancyId")
+                    b.Property<string>("VacancyId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VacancyId"), 1L, 1);
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValueSql("NEWID()");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -120,8 +123,9 @@ namespace EmploymentSystem.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EmployerId")
-                        .HasColumnType("int");
+                    b.Property<string>("EmployerId")
+                        .IsRequired()
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("datetime2");
@@ -144,7 +148,8 @@ namespace EmploymentSystem.Infrastructure.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");

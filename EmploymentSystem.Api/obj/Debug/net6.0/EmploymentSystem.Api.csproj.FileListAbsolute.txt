@@ -104,6 +104,7 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Api/obj/Deb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.csproj.CoreCompileInputs.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.MvcApplicationPartsAssemblyInfo.cs
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.sourcelink.json
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/staticwebassets.build.json
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/staticwebassets.development.json
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/staticwebassets/msbuild.EmploymentSystem.Api.Microsoft.AspNetCore.StaticWebAssets.props

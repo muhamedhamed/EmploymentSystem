@@ -2,9 +2,8 @@
 
 public class ApplicationVacancyDto
 {
-    public int ApplicationId { get; set; }
-    public int ApplicantId { get; set; }
-    public int VacancyId { get; set; }
+    public string ApplicantId { get; set; }
+    public string VacancyId { get; set; }
     public bool IsActive { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

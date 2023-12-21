@@ -8,54 +8,60 @@ namespace EmploymentSystem.Api.Controllers;
 [Route("api/users")]
 public class UserController : ControllerBase
 {
-        private readonly IUserService _userService;
+    private readonly IUserService _userService;
 
-        public UserController(IUserService userService)
+    public UserController(IUserService userService)
+    {
+        _userService = userService;
+    }
+
+    [HttpPost]
+    public IActionResult AddUser([FromBody] UserDto userDto)
+    {
+        try
         {
-            _userService = userService;
+            var result =_userService.AddUser(userDto);
+            return CreatedAtAction(nameof(GetUserById), new { result.Username }, userDto);
         }
-
-        [HttpGet("{userId}")]
-        public IActionResult GetUserById(int userId)
+        catch (Exception ex)
         {
-            var userDto = _userService.GetUserById(userId);
-            if (userDto == null)
-            {
-                return NotFound();
-            }
-            return Ok(userDto);
-        }
+            // Log the exception if needed
+            return BadRequest();
 
-        [HttpGet]
-        public IActionResult GetAllUsers()
+            // Throw an exception to indicate failure
+            throw new Exception("Failed to add user: " + ex.Message);
+        }
+    }
+
+    [HttpGet("{userId}")]
+    public IActionResult GetUserById(string userId)
+    {
+        var userDto = _userService.GetUserById(userId);
+        if (userDto == null)
         {
-            var usersDto = _userService.GetAllUsers();
-            return Ok(usersDto);
+            return NotFound();
         }
+        return Ok(userDto);
+    }
 
-        [HttpPost]
-        public IActionResult AddUser([FromBody] UserDto userDto)
-        {
-            _userService.AddUser(userDto);
-            return CreatedAtAction(nameof(GetUserById), new { userId = userDto.UserId }, userDto);
-        }
+    [HttpGet]
+    public IActionResult GetAllUsers()
+    {
+        var usersDto = _userService.GetAllUsers();
+        return Ok(usersDto);
+    }
 
-        [HttpPut("{userId}")]
-        public IActionResult UpdateUser(int userId, [FromBody] UserDto userDto)
-        {
-            if (userId != userDto.UserId)
-            {
-                return BadRequest();
-            }
+    [HttpPut("{userId}")]
+    public IActionResult UpdateUser(string userId, [FromBody] UserDto userDto)
+    {
+        _userService.UpdateUser(userDto,userId);
+        return NoContent();
+    }
 
-            _userService.UpdateUser(userDto);
-            return NoContent();
-        }
-
-        [HttpDelete("{userId}")]
-        public IActionResult DeleteUser(int userId)
-        {
-            _userService.DeleteUser(userId);
-            return NoContent();
-        }
+    [HttpDelete("{userId}")]
+    public IActionResult DeleteUser(string userId)
+    {
+        _userService.DeleteUser(userId);
+        return NoContent();
+    }
 }

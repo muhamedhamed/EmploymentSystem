@@ -4,11 +4,11 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IUserService
 {
-    UserDto GetUserById(int userId);
+    UserDto GetUserById(string userId);
     IEnumerable<UserDto> GetAllUsers();
-    void AddUser(UserDto userDto);
-    void UpdateUser(UserDto userDto);
-    void DeleteUser(int userId);
+    UserDto AddUser(UserDto userDto);
+    UserDto UpdateUser(UserDto userDto,string userId);
+    void DeleteUser(string userId);
     // UserDto GetUserByUsername(string username);
     // IEnumerable<UserDto> GetUsersByRole(UserDto role);
     // // Other methods related to user management...

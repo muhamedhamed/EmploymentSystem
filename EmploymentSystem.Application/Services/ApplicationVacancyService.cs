@@ -22,32 +22,32 @@ public class ApplicationVacancyService : IApplicationVacancyService
         _mapper = mapper;
     }
 
-    public void ApplyForVacancy(ApplicationVacancyDto applicationDto)
+    public ApplicationVacancyDto ApplyForVacancy(ApplicationVacancyDto applicationDto)
     {
         var applicationEntity = _mapper.Map<ApplicationVacancy>(applicationDto);
         _unitOfWork.ApplicationVacancyRepository.Add(applicationEntity);
         _unitOfWork.SaveChanges();
+        return applicationDto;
     }
 
-    public ApplicationVacancyDto GetApplicationById(int applicationId)
+    public ApplicationVacancyDto GetApplicationById(string applicationId)
     {
         var applicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
         return _mapper.Map<ApplicationVacancyDto>(applicationEntity);
     }
 
-    public void UpdateApplication(ApplicationVacancyDto applicationDto)
+    public ApplicationVacancyDto UpdateApplication(ApplicationVacancyDto applicationDto, string applicationId)
     {
-        var existingApplicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationDto.ApplicationId);
-        if (existingApplicationEntity != null)
-        {
-            _mapper.Map(applicationDto, existingApplicationEntity);
-            _unitOfWork.ApplicationVacancyRepository.Update(existingApplicationEntity);
-            _unitOfWork.SaveChanges();
-        }
+        var existingApplicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
+        _mapper.Map(applicationDto, existingApplicationEntity);
+        _unitOfWork.ApplicationVacancyRepository.Update(existingApplicationEntity);
+        _unitOfWork.SaveChanges();
+        return _mapper.Map<ApplicationVacancyDto>(existingApplicationEntity);
         // Handle case when the application doesn't exist or other business logic.
     }
 
-    public void WithdrawApplication(int applicationId)
+
+    public void WithdrawApplication(string applicationId)
     {
         var applicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
         if (applicationEntity != null)

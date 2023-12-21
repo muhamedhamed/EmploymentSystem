@@ -9,12 +9,12 @@ namespace EmploymentSystem.Domain.Entities
 {
     public class ApplicationVacancy:Base
     {
-        public int ApplicationVacancyId { get; set; }
+        public string ApplicationVacancyId { get; set; }
 
         // Navigation properties
-        public int ApplicantId { get; set; } // Foreign key
+        public string ApplicantId { get; set; } // Foreign key
         public User Applicant { get; set; } // Navigation property
-        public int VacancyId { get; set; } // Foreign key
+        public string VacancyId { get; set; } // Foreign key
         public Vacancy AppliedVacancy { get; set; } // Navigation property
     }
 }

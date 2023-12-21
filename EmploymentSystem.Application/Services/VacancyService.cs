@@ -22,14 +22,7 @@ public class VacancyService : IVacancyService
         _mapper = mapper;
     }
 
-    public void CreateVacancy(VacancyDto vacancyDto)
-    {
-        var vacancyEntity = _mapper.Map<Vacancy>(vacancyDto);
-        _unitOfWork.VacancyRepository.Add(vacancyEntity);
-        _unitOfWork.SaveChanges();
-    }
-
-    public VacancyDto GetVacancyById(int vacancyId)
+    public VacancyDto GetVacancyById(string vacancyId)
     {
         var vacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
         return _mapper.Map<VacancyDto>(vacancyEntity);
@@ -41,19 +34,26 @@ public class VacancyService : IVacancyService
         return _mapper.Map<IEnumerable<VacancyDto>>(vacanciesEntities);
     }
 
-    public void UpdateVacancy(VacancyDto vacancyDto)
+    public VacancyDto CreateVacancy(VacancyDto vacancyDto)
     {
-        var existingVacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyDto.VacancyId);
-        if (existingVacancyEntity != null)
-        {
-            _mapper.Map(vacancyDto, existingVacancyEntity);
-            _unitOfWork.VacancyRepository.Update(existingVacancyEntity);
-            _unitOfWork.SaveChanges();
-        }
-        // Handle case when the vacancy doesn't exist or other business logic.
+        var vacancyEntity = _mapper.Map<Vacancy>(vacancyDto);
+        _unitOfWork.VacancyRepository.Add(vacancyEntity);
+        _unitOfWork.SaveChanges();
+        return vacancyDto;
     }
 
-    public void DeleteVacancy(int vacancyId)
+    public VacancyDto UpdateVacancy(VacancyDto vacancyDto, string vacancyId)
+    {
+        var existingVacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
+
+        _mapper.Map(vacancyDto, existingVacancyEntity);
+        _unitOfWork.VacancyRepository.Update(existingVacancyEntity);
+        _unitOfWork.SaveChanges();
+
+        return _mapper.Map<VacancyDto>(existingVacancyEntity);
+    }
+
+    public void DeleteVacancy(string vacancyId)
     {
         var vacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
         if (vacancyEntity != null)
