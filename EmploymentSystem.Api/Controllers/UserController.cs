@@ -9,16 +9,23 @@ namespace EmploymentSystem.Api.Controllers;
 public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
+    private readonly ILogger<UserController> _logger;
 
-    public UserController(IUserService userService)
+    public UserController(
+        ILogger<UserController> logger,
+        IUserService userService)
     {
-        _userService = userService;
+        _logger = logger ??
+                    throw new ArgumentNullException(nameof(logger));
+        _userService = userService ??
+                    throw new ArgumentNullException(nameof(userService));
     }
 
     [HttpGet]
     public IActionResult GetAllUsers()
     {
         var usersDto = _userService.GetAllUsers();
+        _logger.LogInformation($"All Users is returned.");
         return Ok(usersDto);
     }
 
@@ -29,8 +36,10 @@ public class UserController : ControllerBase
         var userDto = _userService.GetUserById(userId);
         if (userDto == null)
         {
+            _logger.LogInformation($"user with Id: {userId} not found");
             return NotFound();
         }
+        _logger.LogInformation($"user with Id: {userId} is found and returned");
         return Ok(userDto);
     }
 
@@ -42,19 +51,19 @@ public class UserController : ControllerBase
         {
             if (!ModelState.IsValid)
             {
+                _logger.LogError($"Error while adding new user with Email :{userDto.Email}");
                 return BadRequest();
             }
 
             var result = _userService.AddUser(userDto);
+            _logger.LogInformation($"Successfully add new user with Email :{userDto.Email}");
             return CreatedAtAction(nameof(AddUser), userDto);
         }
         catch (Exception ex)
         {
             // Log the exception if needed
+             _logger.LogError($"Error while adding new user with Email :{userDto.Email}");
             return BadRequest();
-
-            // Throw an exception to indicate failure
-            throw new Exception("Failed to add user: " + ex.Message);
         }
     }
 

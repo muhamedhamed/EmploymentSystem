@@ -7,8 +7,17 @@ using Microsoft.EntityFrameworkCore;
 using EmploymentSystem.Application.Interfaces;
 using App.Application;
 using EmploymentSystem.Application.Mapper;
+using Serilog;
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/employment_system_info.txt", rollingInterval: RollingInterval.Day) // create log file daily
+    .CreateLogger();
+    
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
