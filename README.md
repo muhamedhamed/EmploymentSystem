@@ -33,7 +33,7 @@ Articles That I explore also for knowledge and info about clean architecture
 - https://ardalis.com/aspnetcore-clean-architecture-template-version-8/
 - https://medium.com/@edin.sahbaz/getting-started-with-clean-architecture-in-net-core-fa9151bc5918
 
-**DB used is MS SQL server.**
+**DB used is MS SQL server**
 **Simple clean architecture is applied**
 **Serilog is used as Logger**
 
@@ -45,6 +45,6 @@ After I create the solution and projects structure, My Laptop is Broken and shut
 
 To Run the Project:
 1- Need to use VS Code as it created and configured on VS Code, Will work on Visual Studio Also but may need some addetional minner fixes.
-2- Use SQL Server or SQl Serve on Docker and update the Conncection String.
+2- Use SQL Server or SQl Serve on Docker and update the Conncection String,run database update command to get new created database.
 3- Use Postman as API Documentation or Swagger as it configured with Swagger UI.
 4- Additional Apis is created as it as mentioned was first time for me to create that structure so I was want to work will some generic Apis first before go into the business need.

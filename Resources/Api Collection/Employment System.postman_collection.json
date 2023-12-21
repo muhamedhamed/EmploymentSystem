@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "a0f81107-afc6-44e6-a519-102ea23e001b",
+		"name": "Employment System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31486509"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5026/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Dec 2023 12:13:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"01145708978\",\n        \"email\": \"mohamed@example.com\",\n        \"username\": \"mohamed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Employer\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    },\n    {\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"01145708978\",\n        \"email\": \"mohamed@example.com\",\n        \"username\": \"mohamed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Applicant\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    },\n    {\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"01145708978\",\n        \"email\": \"mohamed@example.com\",\n        \"username\": \"mohamed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Applicant\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    },\n    {\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"01145708978\",\n        \"email\": \"mohamed@example.com\",\n        \"username\": \"mohamed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Employer\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    },\n    {\n        \"firstName\": \"Ahmed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"00045708978\",\n        \"email\": \"ahmed@example.com\",\n        \"username\": \"ahmed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Applicant\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    },\n    {\n        \"firstName\": \"Mohamed\",\n        \"lastName\": \"Hamed\",\n        \"phoneNumber\": \"01145708978\",\n        \"email\": \"mohamed@example.com\",\n        \"username\": \"mohamed@example.com\",\n        \"password\": \"Password123\",\n        \"role\": \"Employer\",\n        \"isActive\": false,\n        \"createdAt\": \"0001-01-01T00:00:00\",\n        \"updatedAt\": \"0001-01-01T00:00:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"FirstName\": \"Mona\",\n  \"LastName\": \"salah\",\n  \"PhoneNumber\": \"00040708978\",\n  \"Email\": \"mona@example.com\",\n  \"Username\": \"mona@example.com\",\n  \"Password\": \"Password123\",\n  \"Role\": \"Employer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users",
+						"36A9F6EA-618F-48C3-9BB5-B34C8111F807"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get USer By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5026/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5026",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Dec 2023 21:56:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": 3,\n    \"firstName\": \"Mohamed\",\n    \"lastName\": \"Hamed\",\n    \"phoneNumber\": \"123456789\",\n    \"email\": \"mohamed@example.com\",\n    \"username\": \"mohamed@example.com\",\n    \"password\": \"Password123\",\n    \"role\": \"Employer\",\n    \"isActive\": false,\n    \"createdAt\": \"0001-01-01T00:00:00\",\n    \"updatedAt\": \"0001-01-01T00:00:00\"\n}"
+				},
+				{
+					"name": "Get User By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5026/api/users/36A9F6EA-618F-48C3-9BB5-B34C8111F807",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5026",
+							"path": [
+								"api",
+								"users",
+								"36A9F6EA-618F-48C3-9BB5-B34C8111F807"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Dec 2023 12:12:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"Mohamed\",\n    \"lastName\": \"Hamed\",\n    \"phoneNumber\": \"01145708978\",\n    \"email\": \"mohamed@example.com\",\n    \"username\": \"mohamed@example.com\",\n    \"password\": \"Password123\",\n    \"role\": \"Employer\",\n    \"isActive\": false,\n    \"createdAt\": \"0001-01-01T00:00:00\",\n    \"updatedAt\": \"0001-01-01T00:00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Email\": \"mohamed@example.com\",\n  \"Password\": \"Password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"FirstName\": \"Mohamed Updated\",\n  \"LastName\": \"Hamed Updated\",\n  \"PhoneNumber\": \"1234536789E\",\n  \"Email\": \"edited@example.com\",\n  \"Username\": \"edited@example.com\",\n  \"Password\": \"Password123edited\",\n  \"Role\": \"Applicant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/users/1FB10252-6C89-4267-99A8-50E99997996F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users",
+						"1FB10252-6C89-4267-99A8-50E99997996F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/users/1FB10252-6C89-4267-99A8-50E99997996F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"users",
+						"1FB10252-6C89-4267-99A8-50E99997996F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vacancies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/vacancies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"vacancies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vacancy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Title\": \"Software Developer\",\n  \"Description\": \"Exciting opportunity for a skilled developer.\",\n  \"Salary\": 80000.00,\n  \"Location\": \"City XYZ\",\n  \"MaxApplications\": 100,\n  \"ExpiryDate\": \"2023-12-31T23:59:59\",\n  \"IsExpired\": false,\n  \"IsActive\": true,\n  \"EmployerId\":\"36A9F6EA-618F-48C3-9BB5-B34C8111F807\",\n  \"CreatedAt\": \"2023-01-01T12:00:00\",\n  \"UpdatedAt\": \"2023-01-05T15:30:00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/vacancies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"vacancies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Vacancy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Title\": \"Software Developer\",\n  \"Description\": \"Exciting opportunity for a skilled developer.\",\n  \"Salary\": 80000.00,\n  \"Location\": \"City XYZ\",\n  \"MaxApplications\": 100,\n  \"ExpiryDate\": \"2023-12-31T23:59:59\",\n  \"IsExpired\": false,\n  \"IsActive\": true,\n  \"EmployerId\":3,\n  \"CreatedAt\": \"2023-01-01T12:00:00\",\n  \"UpdatedAt\": \"2023-01-05T15:30:00\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5026/api/vacancies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5026",
+							"path": [
+								"api",
+								"vacancies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Dec 2023 22:32:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7211/api/vacancies/0"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vacancyId\": 0,\n    \"title\": \"Software Developer\",\n    \"description\": \"Exciting opportunity for a skilled developer.\",\n    \"salary\": 80000,\n    \"location\": \"City XYZ\",\n    \"maxApplications\": 100,\n    \"employerId\": 3,\n    \"expiryDate\": \"2023-12-31T23:59:59\",\n    \"isExpired\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-01T12:00:00\",\n    \"updatedAt\": \"2023-01-05T15:30:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Vacancy By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/vacancies/E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"vacancies",
+						"E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vacancy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/vacancies/E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"vacancies",
+						"E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vacancy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Software Developer Updated\",\n    \"description\": \"Exciting opportunity for a skilled developer. updated\",\n    \"salary\": 60000.00,\n    \"location\": \"City XYZ updated\",\n    \"maxApplications\": 200,\n    \"employerId\": \"36A9F6EA-618F-48C3-9BB5-B34C8111F807\",\n    \"expiryDate\": \"2023-12-31T23:59:59\",\n    \"isExpired\": true,\n    \"isActive\": false,\n    \"createdAt\": \"2023-01-01T12:00:00\",\n    \"updatedAt\": \"2023-01-05T15:30:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/vacancies/E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"vacancies",
+						"E04B8D1E-27EE-4DC3-A8B5-D3211FD9D63F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ApplicantId\": \"36A9F6EA-618F-48C3-9BB5-B34C8111F807\",\n  \"VacancyId\": \"CAE77A3C-75D0-486C-B5A1-5921A3957554\",\n  \"IsActive\": true,\n  \"CreatedAt\": \"2023-01-10T08:30:00\",\n  \"UpdatedAt\": \"2023-01-15T16:45:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/applications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Applications By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/applications/D3289947-1B4A-427A-9882-BBD3874572A6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"applications",
+						"D3289947-1B4A-427A-9882-BBD3874572A6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Application",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"applicantId\": \"36A9F6EA-618F-48C3-9BB5-B34C8111F807\",\n    \"vacancyId\": \"CAE77A3C-75D0-486C-B5A1-5921A3957554\",\n    \"isActive\": false,\n    \"createdAt\": \"2023-01-10T08:30:00\",\n    \"updatedAt\": \"2023-01-15T16:45:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5026/api/applications/D3289947-1B4A-427A-9882-BBD3874572A6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"applications",
+						"D3289947-1B4A-427A-9882-BBD3874572A6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Application",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5026/api/applications/D3289947-1B4A-427A-9882-BBD3874572A6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5026",
+					"path": [
+						"api",
+						"applications",
+						"D3289947-1B4A-427A-9882-BBD3874572A6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
