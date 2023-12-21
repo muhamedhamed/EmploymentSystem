@@ -84,10 +84,15 @@ public class UserController : ControllerBase
     }
 
     [HttpGet,Route("login")]
-    public IActionResult GetUserByEmailAndPassword([FromBody] UserLoginDto userLoginDto)
+    public IActionResult Login([FromBody] UserLoginDto userLoginDto)
     {
-        var usersDto = _userService.GetUserByEmailAndPassword(userLoginDto.Email, userLoginDto.Password);
+        var result = _userService.Authenticate(userLoginDto.Email, userLoginDto.Password);
         _logger.LogInformation($"User is returned.");
-        return Ok(usersDto);
+        if (result.Success)
+        {
+            return Ok(new { Token = result.Token });
+        }
+
+        return Unauthorized();
     }
 }

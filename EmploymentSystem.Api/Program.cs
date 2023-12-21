@@ -1,21 +1,29 @@
 using EmploymentSystem.Application.Services;
-using Microsoft.Extensions.DependencyInjection;
 using EmploymentSystem.Domain.Interfaces.Repositories;
 using EmploymentSystem.Infrastructure;
 using EmploymentSystem.Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
 using EmploymentSystem.Application.Interfaces;
 using App.Application;
+using Microsoft.EntityFrameworkCore;
 using EmploymentSystem.Application.Mapper;
 using Serilog;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.File("logs/employment_system_info.txt", rollingInterval: RollingInterval.Day) // create log file daily
     .CreateLogger();
-    
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration
+  .SetBasePath(Directory.GetCurrentDirectory())
+  .AddJsonFile("appsettings.json", false, true)
+  .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", false, true)
+  .AddEnvironmentVariables();
 
 builder.Host.UseSerilog();
 
@@ -40,7 +48,7 @@ builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddCors();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IVacancyRepository,VacancyRepository>();
+builder.Services.AddScoped<IVacancyRepository, VacancyRepository>();
 builder.Services.AddScoped<IApplicationVacancyRepository, ApplicationVacancyRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -50,6 +58,23 @@ builder.Services.AddScoped<IVacancyService, VacancyService>();
 builder.Services.AddScoped<IApplicationVacancyService, ApplicationVacancyService>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Services.AddAuthentication("Bearer")
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Authentication:Issuer"],
+        ValidAudience = builder.Configuration["Authentication:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+                             Encoding.ASCII.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
+    };
+});
+
 
 var app = builder.Build();
 
@@ -65,6 +90,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
