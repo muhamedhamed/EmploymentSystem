@@ -1841,3 +1841,6 @@ FROM [Vacancies] AS [v]
 2023-12-21 23:24:07.754 +02:00 [DBG] Connection id "0HN02DB4L7UUQ" stopped.
 2023-12-21 23:24:07.756 +02:00 [DBG] Connection id "0HN02DB4L7UUO" sending FIN because: "The Socket transport's send loop completed gracefully."
 2023-12-21 23:24:07.765 +02:00 [DBG] Connection id "0HN02DB4L7UUQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-12-21 23:44:54.262 +02:00 [INF] Application is shutting down...
+2023-12-21 23:44:54.263 +02:00 [DBG] Hosting stopping
+2023-12-21 23:44:54.269 +02:00 [DBG] Hosting stopped

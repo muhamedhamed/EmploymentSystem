@@ -7,8 +7,7 @@ namespace EmploymentSystem.Api.Controllers;
 
 [ApiController]
 [Route("api/vacancies")]
-[Authorize]
-// [Authorize(Roles = "Employer")]
+[Authorize(Roles = "Employer")]
 public class VacancyController : ControllerBase
 {
     private readonly IVacancyService _vacancyService;

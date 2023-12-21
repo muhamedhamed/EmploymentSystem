@@ -25,7 +25,7 @@ builder.Configuration
   .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", false, true)
   .AddEnvironmentVariables();
 
-builder.Host.UseSerilog();
+// builder.Host.UseSerilog();
 
 // Add services to the container.
 
@@ -75,6 +75,19 @@ builder.Services.AddAuthentication("Bearer")
     };
 });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Employer", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("role", "Employer");
+    });
+    options.AddPolicy("Applicant", policy =>
+    {
+    policy.RequireAuthenticatedUser();
+    policy.RequireClaim("role", "Applicant");
+    });
+});
 
 var app = builder.Build();
 
