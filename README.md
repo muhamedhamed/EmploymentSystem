@@ -44,7 +44,9 @@ After I create the solution and projects structure, My Laptop is Broken and shut
 - May I take some more time to finish some of Business Cases but at the end is Demo and open for Improvements and Updates.
 
 To Run the Project:
-1- Need to use VS Code as it created and configured on VS Code, Will work on Visual Studio Also but may need some addetional minner fixes.
+1- Need to use VS Code as it created and configured on VS Code, Will work on Visual Studio Also but may need some additional minner fixes.
 2- Use SQL Server or SQl Serve on Docker and update the Conncection String,run database update command to get new created database.
 3- Use Postman as API Documentation or Swagger as it configured with Swagger UI.
 4- Additional Apis is created as it as mentioned was first time for me to create that structure so I was want to work will some generic Apis first before go into the business need.
+
+I will add some fixes on the project and work on some business requirement in the task but I as I told you before.
