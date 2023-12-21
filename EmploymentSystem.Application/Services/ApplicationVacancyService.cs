@@ -13,10 +13,10 @@ namespace EmploymentSystem.Application.Services;
 
 public class ApplicationVacancyService : IApplicationVacancyService
 {
-    private readonly IUnitOfWork<ApplicationVacancy> _unitOfWork;
+    private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
-    public ApplicationVacancyService(IUnitOfWork<ApplicationVacancy> unitOfWork, IMapper mapper)
+    public ApplicationVacancyService(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;

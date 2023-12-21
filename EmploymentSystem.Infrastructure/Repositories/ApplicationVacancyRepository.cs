@@ -3,14 +3,14 @@ using EmploymentSystem.Domain.Interfaces.Repositories;
 
 namespace EmploymentSystem.Infrastructure.Repositories;
 
-public class ApplicationVacancyRepository 
+public class ApplicationVacancyRepository : GenericRepository<ApplicationVacancy>, IApplicationVacancyRepository
 {
-    // private readonly AppDbContext _context;
+    private readonly AppDbContext _context;
 
-    // public ApplicationVacancyRepository(AppDbContext context)
-    // {
-    //     _context = context;
-    // }
+    public ApplicationVacancyRepository(AppDbContext context) :base(context)
+    {
+        _context = context;
+    }
 
     // public IEnumerable<ApplicationVacancy> GetApplicationsByApplicant(int applicantId)
     // {

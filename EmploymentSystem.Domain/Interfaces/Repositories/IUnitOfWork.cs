@@ -7,12 +7,11 @@ using EmploymentSystem.Domain.Entities;
 
 namespace EmploymentSystem.Domain.Interfaces.Repositories
 {
-    public interface IUnitOfWork<TEntity> where TEntity : class
+    public interface IUnitOfWork :IDisposable
     {
-        public IGenericRepository<TEntity> Repository { get; }
         public IUserRepository UserRepository { get; }
-        public IGenericRepository<TEntity> VacancyRepository { get; }
-        public IGenericRepository<TEntity> ApplicationVacancyRepository { get; }
+        public IVacancyRepository VacancyRepository { get; }
+        public IApplicationVacancyRepository ApplicationVacancyRepository { get; }
         void BeginTransaction();
         void SaveChanges();
         void CommitTransaction();

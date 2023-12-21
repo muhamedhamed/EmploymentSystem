@@ -40,9 +40,9 @@ builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddCors();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-// builder.Services.AddScoped<IVacancyRepository>();
-// builder.Services.AddScoped<IApplicationVacancyRepository>();
-builder.Services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+builder.Services.AddScoped<IVacancyRepository,VacancyRepository>();
+builder.Services.AddScoped<IApplicationVacancyRepository, ApplicationVacancyRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 builder.Services.AddScoped<IUserService, UserService>();

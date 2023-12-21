@@ -5,32 +5,25 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace EmploymentSystem.Infrastructure;
 
-public class UnitOfWork<TEntity> : IUnitOfWork<TEntity> where TEntity : class
+public class UnitOfWork : IUnitOfWork
 {
     private readonly AppDbContext _dbContext;
     private IDbContextTransaction _transaction;
 
     public UnitOfWork(AppDbContext dbContext,
-                         IGenericRepository<TEntity> repository,
                          IUserRepository userRepository,
-                         IGenericRepository<Vacancy> vacancyRepository,
-                         IGenericRepository<ApplicationVacancy> applicationVacancyRepository)
+                         IVacancyRepository vacancyRepository,
+                         IApplicationVacancyRepository applicationVacancyRepository)
     {
         _dbContext = dbContext;
-        Repository =repository;
         UserRepository = userRepository;
         VacancyRepository = vacancyRepository;
         ApplicationVacancyRepository = applicationVacancyRepository;
     }
 
-    public IGenericRepository<TEntity> Repository { get; }
     public IUserRepository UserRepository { get; }
-    public IGenericRepository<Vacancy> VacancyRepository { get; }
-    public IGenericRepository<ApplicationVacancy> ApplicationVacancyRepository { get; }
-
-    IGenericRepository<TEntity> IUnitOfWork<TEntity>.VacancyRepository => throw new NotImplementedException();
-
-    IGenericRepository<TEntity> IUnitOfWork<TEntity>.ApplicationVacancyRepository => throw new NotImplementedException();
+    public IVacancyRepository VacancyRepository { get; }
+    public IApplicationVacancyRepository ApplicationVacancyRepository { get; }
 
     public void BeginTransaction()
     {

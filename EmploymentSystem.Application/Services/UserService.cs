@@ -14,11 +14,11 @@ namespace EmploymentSystem.Application.Services;
 
 public class UserService : IUserService
 {
-    private readonly IUnitOfWork<User> _unitOfWork;
+    private readonly IUnitOfWork _unitOfWork;
       private readonly IUserRepository _userRepository;
     private readonly IMapper _mapper;
 
-    public UserService(IUnitOfWork<User> unitOfWork, IMapper mapper,IUserRepository userRepository)
+    public UserService(IUnitOfWork unitOfWork, IMapper mapper,IUserRepository userRepository)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
@@ -27,13 +27,13 @@ public class UserService : IUserService
 
     public UserDto GetUserById(string userId)
     {
-        var userEntity = _unitOfWork.Repository.GetById(userId);
+        var userEntity = _unitOfWork.UserRepository.GetById(userId);
         return _mapper.Map<UserDto>(userEntity);
     }
 
     public IEnumerable<UserDto> GetAllUsers()
     {
-        var usersEntities = _unitOfWork.Repository.GetAll();
+        var usersEntities = _unitOfWork.UserRepository.GetAll();
         return _mapper.Map<IEnumerable<UserDto>>(usersEntities);
     }
     public UserDto AddUser(UserDto userDto)
@@ -47,7 +47,7 @@ public class UserService : IUserService
     public UserDto UpdateUser(UserDto userDto, string userId)
     {
         // Ad more validation
-        var existingUserEntity = _unitOfWork.Repository.GetById(userId);
+        var existingUserEntity = _unitOfWork.UserRepository.GetById(userId);
         _mapper.Map(userDto, existingUserEntity);
         _unitOfWork.UserRepository.Update(existingUserEntity);
         _unitOfWork.SaveChanges();
@@ -58,10 +58,10 @@ public class UserService : IUserService
 
     public void DeleteUser(string userId)
     {
-        var userEntity = _unitOfWork.Repository.GetById(userId);
+        var userEntity = _unitOfWork.UserRepository.GetById(userId);
         if (userEntity != null)
         {
-            _unitOfWork.Repository.Remove(userEntity);
+            _unitOfWork.UserRepository.Remove(userEntity);
             _unitOfWork.SaveChanges();
         }
     }

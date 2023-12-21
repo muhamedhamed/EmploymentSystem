@@ -1,15 +1,16 @@
 ﻿using EmploymentSystem.Domain.Entities;
+using EmploymentSystem.Domain.Interfaces.Repositories;
 
 namespace EmploymentSystem.Infrastructure.Repositories;
 
-public class VacancyRepository
+public class VacancyRepository : GenericRepository<Vacancy>, IVacancyRepository
 {
-// private readonly AppDbContext _context;
+private readonly AppDbContext _context;
 
-//     public VacancyRepository(AppDbContext context)
-//     {
-//         _context = context;
-//     }
+    public VacancyRepository(AppDbContext context) :base(context)
+    {
+        _context = context;
+    }
 
 //     public IEnumerable<Vacancy> GetActiveVacancies()
 //     {
