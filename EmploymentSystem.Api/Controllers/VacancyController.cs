@@ -17,7 +17,16 @@ public class VacancyController : ControllerBase
         _vacancyService = vacancyService;
     }
 
+    [HttpGet]
+    [ActionName("GetAllVacancies")]
+    public IActionResult GetAllVacancies()
+    {
+        var vacanciesDto = _vacancyService.GetAllVacancies();
+        return Ok(vacanciesDto);
+    }
+
     [HttpGet("{vacancyId}")]
+    [ActionName("GetVacancyById")]
     public IActionResult GetVacancyById(string vacancyId)
     {
         var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
@@ -28,20 +37,14 @@ public class VacancyController : ControllerBase
         return Ok(vacancyDto);
     }
 
-    [HttpGet]
-    public IActionResult GetAllVacancies()
-    {
-        var vacanciesDto = _vacancyService.GetAllVacancies();
-        return Ok(vacanciesDto);
-    }
-
     [HttpPost]
+    [ActionName("CreateVacancy")]
     public IActionResult CreateVacancy([FromBody] VacancyDto vacancyDto)
     {
         try
         {
             var result =_vacancyService.CreateVacancy(vacancyDto);
-            return CreatedAtAction(nameof(GetVacancyById), new { result.EmployerId }, vacancyDto);
+            return CreatedAtAction(nameof(CreateVacancy), vacancyDto);
         }
         catch (Exception ex)
         {
@@ -54,6 +57,7 @@ public class VacancyController : ControllerBase
     }
 
     [HttpPut("{vacancyId}")]
+    [ActionName("UpdateVacancy")]
     public IActionResult UpdateVacancy(string vacancyId, [FromBody] VacancyDto vacancyDto)
     {
         //need to add check for the existance of the vacancy
@@ -62,6 +66,7 @@ public class VacancyController : ControllerBase
     }
 
     [HttpDelete("{vacancyId}")]
+    [ActionName("DeleteVacancy")]
     public IActionResult DeleteVacancy(string vacancyId)
     {
         _vacancyService.DeleteVacancy(vacancyId);

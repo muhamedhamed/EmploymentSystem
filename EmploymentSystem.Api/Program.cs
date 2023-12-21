@@ -14,10 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
+// I prefer the following way to access database but I use the onConfigure way becasue I get some errors with this way.
 #region DataBase Context
 var connectionString = builder.Configuration.GetConnectionString("EmploymentDB");
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -27,13 +28,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<AppDbContext>();
 #endregion
 
-
 builder.Services.AddCors();
 
 // builder.Services.AddScoped<IUserRepository>();
 // builder.Services.AddScoped<IVacancyRepository>();
 // builder.Services.AddScoped<IApplicationVacancyRepository>();
-
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 

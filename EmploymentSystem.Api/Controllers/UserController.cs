@@ -15,13 +15,38 @@ public class UserController : ControllerBase
         _userService = userService;
     }
 
-    [HttpPost]
+    [HttpGet]
+    public IActionResult GetAllUsers()
+    {
+        var usersDto = _userService.GetAllUsers();
+        return Ok(usersDto);
+    }
+
+    [HttpGet("{userId}")]
+    [ActionName("GetUserById")]
+    public IActionResult GetUserById(string userId)
+    {
+        var userDto = _userService.GetUserById(userId);
+        if (userDto == null)
+        {
+            return NotFound();
+        }
+        return Ok(userDto);
+    }
+
+    [HttpPost, Route("register")]
+    [ActionName("AddUser")]
     public IActionResult AddUser([FromBody] UserDto userDto)
     {
         try
         {
-            var result =_userService.AddUser(userDto);
-            return CreatedAtAction(nameof(GetUserById), new { result.Username }, userDto);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var result = _userService.AddUser(userDto);
+            return CreatedAtAction(nameof(AddUser), userDto);
         }
         catch (Exception ex)
         {
@@ -33,32 +58,16 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpGet("{userId}")]
-    public IActionResult GetUserById(string userId)
-    {
-        var userDto = _userService.GetUserById(userId);
-        if (userDto == null)
-        {
-            return NotFound();
-        }
-        return Ok(userDto);
-    }
-
-    [HttpGet]
-    public IActionResult GetAllUsers()
-    {
-        var usersDto = _userService.GetAllUsers();
-        return Ok(usersDto);
-    }
-
     [HttpPut("{userId}")]
+    [ActionName("UpdateUser")]
     public IActionResult UpdateUser(string userId, [FromBody] UserDto userDto)
     {
-        _userService.UpdateUser(userDto,userId);
+        _userService.UpdateUser(userDto, userId);
         return NoContent();
     }
 
     [HttpDelete("{userId}")]
+    [ActionName("DeleteUser")]
     public IActionResult DeleteUser(string userId)
     {
         _userService.DeleteUser(userId);

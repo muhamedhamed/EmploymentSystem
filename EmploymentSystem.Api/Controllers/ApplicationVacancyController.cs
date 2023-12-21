@@ -18,6 +18,7 @@ public class ApplicationVacancyController : ControllerBase
     }
 
     [HttpGet("{applicationId}")]
+    [ActionName("GetApplicationById")]
     public IActionResult GetApplicationById(string applicationId)
     {
         var applicationDto = _applicationVacancyService.GetApplicationById(applicationId);
@@ -29,12 +30,13 @@ public class ApplicationVacancyController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName("ApplyForVacancy")]
     public IActionResult ApplyForVacancy([FromBody] ApplicationVacancyDto applicationDto)
     {
         try
         {
             var result = _applicationVacancyService.ApplyForVacancy(applicationDto);
-            return CreatedAtAction(nameof(GetApplicationById), new { result.ApplicantId }, applicationDto);
+            return CreatedAtAction(nameof(ApplyForVacancy), applicationDto);
         }
         catch (Exception ex)
         {
@@ -47,6 +49,7 @@ public class ApplicationVacancyController : ControllerBase
     }
 
     [HttpPut("{applicationId}")]
+    [ActionName("UpdateApplication")]
     public IActionResult UpdateApplication(string applicationId, [FromBody] ApplicationVacancyDto applicationDto)
     {
         // if (applicationId != applicationDto.ApplicationId)
@@ -59,6 +62,7 @@ public class ApplicationVacancyController : ControllerBase
     }
 
     [HttpDelete("{applicationId}")]
+    [ActionName("WithdrawApplication")]
     public IActionResult WithdrawApplication(string applicationId)
     {
         _applicationVacancyService.WithdrawApplication(applicationId);
