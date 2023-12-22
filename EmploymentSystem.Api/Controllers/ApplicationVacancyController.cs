@@ -50,6 +50,7 @@ public class ApplicationVacancyController : ControllerBase
 
     [HttpPost]
     [ActionName("ApplyForVacancy")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Authorize(Roles = "Applicant")]
     public IActionResult ApplyForVacancy([FromBody] ApplicationVacancyDto applicationDto)
     {
@@ -71,6 +72,13 @@ public class ApplicationVacancyController : ControllerBase
 
             // Apply for vacancy and return CreatedAtAction result if successful
             var result = _applicationVacancyService.ApplyForVacancy(applicationDto);
+                        // Validate if the request body is null or empty
+            if (result == null)
+            {
+                _logger.LogError("Vacancy Reached the Max allowed number of applications.");
+                return BadRequest("Vacancy Reached the Max allowed number of applications.");
+            }
+            
             _logger.LogInformation("Application Added successfully.");
             return CreatedAtAction(nameof(ApplyForVacancy), applicationDto);
         }

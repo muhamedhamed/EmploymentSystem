@@ -16,24 +16,30 @@ public class ApplicationVacancyService : IApplicationVacancyService
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
-    public ApplicationVacancyService(IUnitOfWork unitOfWork, IMapper mapper)
+    private readonly IVacancyService _vacancyService;
+
+    public ApplicationVacancyService(
+        IUnitOfWork unitOfWork, 
+        IMapper mapper,
+        IVacancyService vacancyService)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+        _vacancyService = vacancyService;
     }
 
     public ApplicationVacancyDto? ApplyForVacancy(ApplicationVacancyDto applicationDto)
     {
         var applicationEntity = _mapper.Map<ApplicationVacancy>(applicationDto);
 
-        //That part of the code need to be moved to another method
+        //That part of the code need to be more organized
         var vacancyEntity = _unitOfWork.VacancyRepository.GetById(applicationEntity.VacancyId);
 
-        var applicationsByVacancyEntity = _unitOfWork.ApplicationVacancyRepository.GetApplicationsByVacancy(applicationEntity.VacancyId);
+        var applicationsByVacancyList = _vacancyService.GetApplicationsByVacancy(vacancyEntity.VacancyId);
 
-        int numberOfApplication = applicationsByVacancyEntity.Count();
+        int numberOfApplication = applicationsByVacancyList.Count();
 
-        if (applicationsByVacancyEntity != null && numberOfApplication < vacancyEntity.MaxApplications)
+        if (applicationsByVacancyList != null && numberOfApplication < vacancyEntity.MaxApplications)
         {
             applicationEntity.CreatedAt = DateTime.Now;
             applicationEntity.UpdatedAt = DateTime.Now;

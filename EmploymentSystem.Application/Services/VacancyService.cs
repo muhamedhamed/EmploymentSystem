@@ -64,6 +64,14 @@ public class VacancyService : IVacancyService
         // Handle case when the vacancy doesn't exist or other business logic.
     }
 
+    public IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(string vacancyId)
+    {
+        var applicationsByVacancyList = _unitOfWork.VacancyRepository
+                                .GetApplicationsByVacancy(vacancyId);
+        var applicationsList = _mapper.Map < IEnumerable < ApplicationVacancyDto >> (applicationsByVacancyList);
+        return applicationsList;
+    }
+
     // public IEnumerable<Vacancy> GetActiveVacancies()
     // {
     //     throw new NotImplementedException();

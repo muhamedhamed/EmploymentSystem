@@ -38,11 +38,6 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public void Remove(TEntity entity)
     {
-        // var found = _dbContext.Set<TEntity>().Find(entity);
-        // if (found == null)
-        //     return false;
-
         _dbContext.Set<TEntity>().Remove(entity);
-        // return true;
     }
 }

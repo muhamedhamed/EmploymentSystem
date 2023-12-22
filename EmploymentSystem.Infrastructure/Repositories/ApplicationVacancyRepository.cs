@@ -17,18 +17,5 @@ public class ApplicationVacancyRepository : GenericRepository<ApplicationVacancy
     // {
     //     throw new NotImplementedException();
     // }
-
-    public IEnumerable<ApplicationVacancy> GetApplicationsByVacancy(string vacancyId)
-    {
-        var vacancies = _context.Vacancies
-            .Include(v => v.Applications)
-            .Where(v => v.VacancyId == vacancyId)
-            .SelectMany(v => v.Applications) 
-            .ToList();
-
-        // return vacancies?.Applications.ToList() ?? new List<ApplicationVacancy>();
-
-        return vacancies;
-    }
 }
 
