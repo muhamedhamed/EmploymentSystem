@@ -48,6 +48,7 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Api/obj/Deb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/AutoMapper.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Humanizer.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -140,4 +141,3 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Api/obj/Deb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.pdb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/EmploymentSystem.Api.genruntimeconfig.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/obj/Debug/net6.0/ref/EmploymentSystem.Api.dll
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

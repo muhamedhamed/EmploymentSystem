@@ -13,17 +13,17 @@ C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Application
 C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/refint/EmploymentSystem.Application.dll
 C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.pdb
 C:/Users/Lenovo/Desktop/New folder/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/ref/EmploymentSystem.Application.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.deps.json
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.pdb
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Domain.dll
+/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Domain.pdb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.csproj.AssemblyReference.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.AssemblyInfoInputs.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.AssemblyInfo.cs
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.csproj.CoreCompileInputs.cache
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.sourcelink.json
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.deps.json
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.dll
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Application.pdb
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Domain.dll
-/Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/bin/Debug/net6.0/EmploymentSystem.Domain.pdb
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.csproj.CopyComplete
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/EmploymentSystem.Application.dll
 /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Application/obj/Debug/net6.0/refint/EmploymentSystem.Application.dll

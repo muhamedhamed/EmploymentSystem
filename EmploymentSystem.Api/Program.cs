@@ -84,9 +84,16 @@ builder.Services.AddAuthorization(options =>
     });
     options.AddPolicy("Applicant", policy =>
     {
-    policy.RequireAuthenticatedUser();
-    policy.RequireClaim("role", "Applicant");
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("role", "Applicant");
     });
+//     // I will that Admin Policy as future update as it will need some refactor
+//     options.AddPolicy("Admin", policy =>
+//    {
+//     policy.RequireAuthenticatedUser();
+//     policy.RequireClaim("role", "Applicant");
+//     policy.RequireClaim("role", "Employer");
+//    });
 });
 
 var app = builder.Build();

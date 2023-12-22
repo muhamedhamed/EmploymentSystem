@@ -107,7 +107,8 @@ public class UserService : IUserService
 
         var claims = new List<Claim>
         {
-            new Claim("sub", email),
+            new Claim("sub", userId),
+            new Claim("userId", userId),
             new Claim("email", email),
             new Claim("password", password),
             new Claim("role", role),

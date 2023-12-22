@@ -26,6 +26,7 @@ public class ApplicationVacancyService : IApplicationVacancyService
     {
         var applicationEntity = _mapper.Map<ApplicationVacancy>(applicationDto);
 
+        //That part of the code need to be moved to another method
         var vacancyEntity = _unitOfWork.VacancyRepository.GetById(applicationEntity.VacancyId);
 
         var applicationsByVacancyEntity = _unitOfWork.ApplicationVacancyRepository.GetApplicationsByVacancy(applicationEntity.VacancyId);
@@ -53,6 +54,7 @@ public class ApplicationVacancyService : IApplicationVacancyService
     {
         var existingApplicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
         _mapper.Map(applicationDto, existingApplicationEntity);
+        existingApplicationEntity.UpdatedAt = DateTime.Now;
         _unitOfWork.ApplicationVacancyRepository.Update(existingApplicationEntity);
         _unitOfWork.SaveChanges();
         return _mapper.Map<ApplicationVacancyDto>(existingApplicationEntity);
@@ -62,21 +64,13 @@ public class ApplicationVacancyService : IApplicationVacancyService
 
     public void WithdrawApplication(string applicationId)
     {
+        //Need Handle case when the application doesn't exist or other business logic.
         var applicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
         if (applicationEntity != null)
         {
+            applicationEntity.UpdatedAt = DateTime.Now;
             _unitOfWork.ApplicationVacancyRepository.Remove(applicationEntity);
             _unitOfWork.SaveChanges();
         }
-        // Handle case when the application doesn't exist or other business logic.
     }
-    // public IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(int vacancyId)
-    // {
-
-    // }
-
-    // public IEnumerable<ApplicationVacancyDto> GetApplicationsByUser(int userId)
-    // {
-
-    // }
 }

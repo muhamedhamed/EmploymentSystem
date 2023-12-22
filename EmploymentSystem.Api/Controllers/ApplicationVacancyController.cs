@@ -71,6 +71,7 @@ public class ApplicationVacancyController : ControllerBase
 
             // Apply for vacancy and return CreatedAtAction result if successful
             var result = _applicationVacancyService.ApplyForVacancy(applicationDto);
+            _logger.LogInformation("Application Added successfully.");
             return CreatedAtAction(nameof(ApplyForVacancy), applicationDto);
         }
         catch (Exception ex)
@@ -82,36 +83,93 @@ public class ApplicationVacancyController : ControllerBase
 
     [HttpPut("{applicationId}")]
     [ActionName("UpdateApplication")]
+    [Authorize(Roles = "Applicant")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public IActionResult UpdateApplication(string applicationId, [FromBody] ApplicationVacancyDto applicationDto)
     {
-        // if (applicationId != applicationDto.ApplicationId)
-        // {
-        //     return BadRequest();
-        // }
+        try
+        {
+            if (!Guid.TryParse(applicationId, out _))
+            {
+                _logger.LogError("Invalid application ID format.");
+                return BadRequest("Invalid application ID format.");
+            }
 
-        _applicationVacancyService.UpdateApplication(applicationDto, applicationId);
-        return NoContent();
+            // Validate if the request body is null or empty
+            if (applicationDto == null)
+            {
+                _logger.LogError("Invalid application data. Request body cannot be null.");
+                return BadRequest("Invalid application data. Request body cannot be null.");
+            }
+
+            // Validate using model state
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state. Check the request data.");
+                return BadRequest(ModelState);
+            }
+
+            var existingApplication = _applicationVacancyService.GetApplicationById(applicationId);
+            if (existingApplication == null)
+            {
+                _logger.LogError($"Application with ID {applicationId} not found.");
+                return NotFound($"Application with ID {applicationId} not found.");
+            }
+
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "userId")?.Value;
+            if (existingApplication.ApplicantId != userId)
+            {
+                _logger.LogError("User does not have permission to update this application.");
+                return Forbid("User does not have permission to update this application.");
+            }
+
+            _applicationVacancyService.UpdateApplication(applicationDto, applicationId);
+            _logger.LogInformation("Application updated successfully.");
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Failed to update application: {ex.Message}");
+            return BadRequest("Internal Server Error");
+        }
     }
 
     [HttpDelete("{applicationId}")]
     [ActionName("WithdrawApplication")]
+    [Authorize(Roles = "Applicant")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public IActionResult WithdrawApplication(string applicationId)
     {
-        _applicationVacancyService.WithdrawApplication(applicationId);
-        return NoContent();
+        try
+        {
+            if (!Guid.TryParse(applicationId, out _))
+            {
+                _logger.LogError("Invalid application ID format.");
+                return BadRequest("Invalid application ID format.");
+            }
+
+            var existingApplication = _applicationVacancyService.GetApplicationById(applicationId);
+            if (existingApplication == null)
+            {
+                _logger.LogError($"Application with ID {applicationId} not found.");
+                return NotFound($"Application with ID {applicationId} not found.");
+            }
+
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "userId")?.Value;
+            if (existingApplication.ApplicantId != userId)
+            {
+                _logger.LogError("User does not have permission to update this application.");
+                return Forbid("User does not have permission to update this application.");
+            }
+
+            _applicationVacancyService.WithdrawApplication(applicationId);
+            _logger.LogInformation("Application deleted successfully.");
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Failed to delete application: {ex.Message}");
+            return BadRequest("Internal Server Error");
+        }
     }
-
-    // [HttpGet("vacancy/{vacancyId}")]
-    // public IActionResult GetApplicationsByVacancy(int vacancyId)
-    // {
-    //     var applicationsDto = _applicationVacancyService.GetApplicationsByVacancy(vacancyId);
-    //     return Ok(applicationsDto);
-    // }
-
-    // [HttpGet("user/{userId}")]
-    // public IActionResult GetApplicationsByUser(int userId)
-    // {
-    //     var applicationsDto = _applicationVacancyService.GetApplicationsByUser(userId);
-    //     return Ok(applicationsDto);
-    // }
 }
