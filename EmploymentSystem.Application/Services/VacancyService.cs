@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,10 @@ public class VacancyService : IVacancyService
     public VacancyDto CreateVacancy(VacancyDto vacancyDto)
     {
         var vacancyEntity = _mapper.Map<Vacancy>(vacancyDto);
+        vacancyEntity.CreatedAt = DateTime.Now;
+        vacancyEntity.UpdatedAt = DateTime.Now;
         _unitOfWork.VacancyRepository.Add(vacancyEntity);
+
         _unitOfWork.SaveChanges();
         return vacancyDto;
     }
@@ -47,6 +51,7 @@ public class VacancyService : IVacancyService
         var existingVacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
 
         _mapper.Map(vacancyDto, existingVacancyEntity);
+        existingVacancyEntity.UpdatedAt = DateTime.Now;
         _unitOfWork.VacancyRepository.Update(existingVacancyEntity);
         _unitOfWork.SaveChanges();
 
@@ -68,7 +73,7 @@ public class VacancyService : IVacancyService
     {
         var applicationsByVacancyList = _unitOfWork.VacancyRepository
                                 .GetApplicationsByVacancy(vacancyId);
-        var applicationsList = _mapper.Map < IEnumerable < ApplicationVacancyDto >> (applicationsByVacancyList);
+        var applicationsList = _mapper.Map<IEnumerable<ApplicationVacancyDto>>(applicationsByVacancyList);
         return applicationsList;
     }
 

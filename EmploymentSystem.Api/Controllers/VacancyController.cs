@@ -236,9 +236,18 @@ public class VacancyController : ControllerBase
                 _logger.LogWarning($"Vacancy with ID: {vacancyId} not found.");
                 return NotFound();
             }
-          _logger.LogInformation($"Successfully retrieved vacancy with ID: {vacancyId}");
-  
-            return Ok(vacancyDto);
+            _logger.LogInformation($"Successfully retrieved vacancy with ID: {vacancyId}");
+
+            var applications = _vacancyService.GetApplicationsByVacancy(vacancyId);
+            if (applications == null)
+            {
+                _logger.LogWarning($"Vacancy with ID: {vacancyId} hasn't application yet.");
+                return NotFound();
+            }
+
+            _logger.LogInformation($"Successfully retrieved applications list for vacancy with ID: {vacancyId}");
+
+            return Ok(applications);
         }
         catch (Exception ex)
         {
