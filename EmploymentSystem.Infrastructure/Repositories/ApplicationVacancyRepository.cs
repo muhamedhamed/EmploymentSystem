@@ -1,5 +1,6 @@
 ﻿using EmploymentSystem.Domain.Entities;
 using EmploymentSystem.Domain.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmploymentSystem.Infrastructure.Repositories;
 
@@ -7,7 +8,7 @@ public class ApplicationVacancyRepository : GenericRepository<ApplicationVacancy
 {
     private readonly AppDbContext _context;
 
-    public ApplicationVacancyRepository(AppDbContext context) :base(context)
+    public ApplicationVacancyRepository(AppDbContext context) : base(context)
     {
         _context = context;
     }
@@ -17,10 +18,17 @@ public class ApplicationVacancyRepository : GenericRepository<ApplicationVacancy
     //     throw new NotImplementedException();
     // }
 
-    // public IEnumerable<ApplicationVacancy> GetApplicationsByVacancy(int vacancyId)
-    // {
-    //     // Implement logic to get applications by vacancy ID from the database
-    //     return _context.ApplicationVacancies.Where(app => app.VacancyId == vacancyId).ToList();
-    // }
+    public IEnumerable<ApplicationVacancy> GetApplicationsByVacancy(string vacancyId)
+    {
+        var vacancies = _context.Vacancies
+            .Include(v => v.Applications)
+            .Where(v => v.VacancyId == vacancyId)
+            .SelectMany(v => v.Applications) 
+            .ToList();
+
+        // return vacancies?.Applications.ToList() ?? new List<ApplicationVacancy>();
+
+        return vacancies;
+    }
 }
 

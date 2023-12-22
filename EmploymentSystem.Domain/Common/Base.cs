@@ -8,8 +8,8 @@ namespace EmploymentSystem.Domain.Common
 {
     public class Base
     {
-        public DateTime CreatedAt { get; set; } // Timestamp for creation
-        public DateTime UpdatedAt { get; set; } // Timestamp for last update
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public bool IsActive { get; set; } // Soft delete flag
     }
 }

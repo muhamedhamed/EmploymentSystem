@@ -22,14 +22,27 @@ public class ApplicationVacancyService : IApplicationVacancyService
         _mapper = mapper;
     }
 
-    public ApplicationVacancyDto ApplyForVacancy(ApplicationVacancyDto applicationDto)
+    public ApplicationVacancyDto? ApplyForVacancy(ApplicationVacancyDto applicationDto)
     {
         var applicationEntity = _mapper.Map<ApplicationVacancy>(applicationDto);
-        _unitOfWork.ApplicationVacancyRepository.Add(applicationEntity);
-        _unitOfWork.SaveChanges();
-        return applicationDto;
-    }
 
+        var vacancyEntity = _unitOfWork.VacancyRepository.GetById(applicationEntity.VacancyId);
+
+        var applicationsByVacancyEntity = _unitOfWork.ApplicationVacancyRepository.GetApplicationsByVacancy(applicationEntity.VacancyId);
+
+        int numberOfApplication = applicationsByVacancyEntity.Count();
+
+        if (applicationsByVacancyEntity != null && numberOfApplication < vacancyEntity.MaxApplications)
+        {
+            applicationEntity.CreatedAt = DateTime.Now;
+            applicationEntity.UpdatedAt = DateTime.Now;
+            _unitOfWork.ApplicationVacancyRepository.Add(applicationEntity);
+            _unitOfWork.SaveChanges();
+            return applicationDto;
+        }
+        // Default return statement
+        return null;
+    }
     public ApplicationVacancyDto GetApplicationById(string applicationId)
     {
         var applicationEntity = _unitOfWork.ApplicationVacancyRepository.GetById(applicationId);
