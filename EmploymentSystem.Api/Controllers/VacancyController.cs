@@ -54,13 +54,13 @@ public class VacancyController : ControllerBase
     {
         try
         {
+            _logger.LogInformation($"Attempting to retrieve vacancy with ID: {vacancyId}");
+
             if (!Guid.TryParse(vacancyId, out _))
             {
                 _logger.LogError("Invalid vacancy ID format.");
                 return BadRequest("Invalid vacancy ID format.");
             }
-
-            _logger.LogInformation($"Attempting to retrieve vacancy with ID: {vacancyId}");
 
             var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
             if (vacancyDto == null)
@@ -86,6 +86,8 @@ public class VacancyController : ControllerBase
     {
         try
         {
+            _logger.LogInformation($"Attempting to create a new vacancy: {vacancyDto.Title}");
+
             // Validate if the request body is null or empty
             if (vacancyDto == null)
             {
@@ -100,8 +102,6 @@ public class VacancyController : ControllerBase
                 return BadRequest(ModelState);
             }
 
-            _logger.LogInformation($"Attempting to create a new vacancy: {vacancyDto.Title}");
-
             var result = _vacancyService.CreateVacancy(vacancyDto);
 
             _logger.LogInformation($"Successfully created a new vacancy with ID: {result.VacancyId}");
@@ -110,7 +110,7 @@ public class VacancyController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError($"Failed to add vacancy: {ex.Message}");
-            return StatusCode(500, "Internal Server Error");
+            return BadRequest("Internal Server Error");
         }
     }
 

@@ -51,6 +51,8 @@ public class UserService : IUserService
     public UserDto AddUser(UserDto userDto)
     {
         var userEntity = _mapper.Map<User>(userDto);
+        userEntity.CreatedAt = DateTime.Now;
+        userEntity.UpdatedAt = DateTime.Now;
         _unitOfWork.UserRepository.Add(userEntity);
         _unitOfWork.SaveChanges();
         return userDto;
@@ -61,6 +63,7 @@ public class UserService : IUserService
         // Ad more validation
         var existingUserEntity = _unitOfWork.UserRepository.GetById(userId);
         _mapper.Map(userDto, existingUserEntity);
+        existingUserEntity.UpdatedAt = DateTime.Now;
         _unitOfWork.UserRepository.Update(existingUserEntity);
         _unitOfWork.SaveChanges();
 
