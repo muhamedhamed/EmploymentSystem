@@ -2,7 +2,7 @@
 
 public class VacancyDto
 {
-    public string VacancyId { get; set; }
+    public string VacancyId { get; set; } // Will be removed when Working with Client
     public string Title { get; set; }
     public string Description { get; set; }
     public decimal Salary { get; set; }

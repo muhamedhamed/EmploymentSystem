@@ -215,7 +215,6 @@ public class UserController : ControllerBase
     [HttpGet, Route("login")]
     public IActionResult Login([FromBody] UserLoginDto userLoginDto)
     {
-
         try
         {
             _logger.LogInformation($"Attempting to login user with email: {userLoginDto.Email}");
