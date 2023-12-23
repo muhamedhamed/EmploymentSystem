@@ -15,6 +15,7 @@ Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.File("logs/employment_system_info.txt", rollingInterval: RollingInterval.Day) // create log file daily
+    // .Filter.ByExcluding("Microsoft") // Exclude Microsoft namespace but not work 
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +26,7 @@ builder.Configuration
   .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", false, true)
   .AddEnvironmentVariables();
 
-// builder.Host.UseSerilog();
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
@@ -87,13 +88,13 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser();
         policy.RequireClaim("role", "Applicant");
     });
-//     // I will that Admin Policy as future update as it will need some refactor
-//     options.AddPolicy("Admin", policy =>
-//    {
-//     policy.RequireAuthenticatedUser();
-//     policy.RequireClaim("role", "Applicant");
-//     policy.RequireClaim("role", "Employer");
-//    });
+    //     // I will that Admin Policy as future update as it will need some refactor
+    //     options.AddPolicy("Admin", policy =>
+    //    {
+    //     policy.RequireAuthenticatedUser();
+    //     policy.RequireClaim("role", "Applicant");
+    //     policy.RequireClaim("role", "Employer");
+    //    });
 });
 
 var app = builder.Build();

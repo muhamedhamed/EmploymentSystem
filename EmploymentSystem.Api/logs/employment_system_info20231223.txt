@@ -1,0 +1,19 @@
+2023-12-23 02:32:22.610 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-12-23 02:32:22.661 +02:00 [DBG] Hosting starting
+2023-12-23 02:32:22.667 +02:00 [INF] User profile is available. Using '/Users/mohamedhamed/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-12-23 02:32:22.668 +02:00 [DBG] Reading data from file '/Users/mohamedhamed/.aspnet/DataProtection-Keys/key-88577373-9d6d-4947-9416-20d46326d4db.xml'.
+2023-12-23 02:32:22.672 +02:00 [DBG] Found key {88577373-9d6d-4947-9416-20d46326d4db}.
+2023-12-23 02:32:22.676 +02:00 [DBG] Considering key {88577373-9d6d-4947-9416-20d46326d4db} with expiration date 2024-03-20 21:21:12Z as default key.
+2023-12-23 02:32:22.677 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-12-23 02:32:22.678 +02:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-12-23 02:32:22.678 +02:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-12-23 02:32:22.680 +02:00 [DBG] Using key {88577373-9d6d-4947-9416-20d46326d4db} as the default key.
+2023-12-23 02:32:22.680 +02:00 [DBG] Key ring with default key {88577373-9d6d-4947-9416-20d46326d4db} was loaded during application startup.
+2023-12-23 02:32:22.770 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 96B2898668BD7D1A42B838ABCF1EA7C4F34CC425)
+2023-12-23 02:32:22.779 +02:00 [INF] Now listening on: https://localhost:7211
+2023-12-23 02:32:22.779 +02:00 [INF] Now listening on: http://localhost:5026
+2023-12-23 02:32:22.779 +02:00 [DBG] Loaded hosting startup assembly EmploymentSystem.Api
+2023-12-23 02:32:22.779 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-23 02:32:22.779 +02:00 [INF] Hosting environment: Development
+2023-12-23 02:32:22.779 +02:00 [INF] Content root path: /Volumes/Mohamed/Projects/DotNet/EmploymentSystem/EmploymentSystem.Api/
+2023-12-23 02:32:22.779 +02:00 [DBG] Hosting started
