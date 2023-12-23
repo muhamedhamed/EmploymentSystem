@@ -22,8 +22,20 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired()
             .HasMaxLength(255); // Adjust the length as needed
 
+        builder.HasIndex(u => u.Email)
+            .IsUnique();
+
         builder.Property(u => u.Username)
             .IsRequired()
             .HasMaxLength(255); // Adjust the length as needed
+
+            
+        builder.HasIndex(u => u.Username)
+            .IsUnique();
+
+        builder.Property(u => u.Role)
+            .HasConversion<string>() // This is optional and converts enum values to strings in the database added for test
+            .IsRequired()
+            .HasMaxLength(20);
     }
 }

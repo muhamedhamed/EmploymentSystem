@@ -7,7 +7,7 @@ public class VacancyConfiguration : IEntityTypeConfiguration<Vacancy>
 {
     public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Vacancy> builder)
     {
-                // Primary key
+        // Primary key
         builder.HasKey(v => v.VacancyId);
 
         // Auto-generate Guid as string
