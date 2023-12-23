@@ -48,6 +48,7 @@ public class UserService : IUserService
         var usersEntities = _unitOfWork.UserRepository.GetAll();
         return _mapper.Map<IEnumerable<UserDto>>(usersEntities);
     }
+    
     public UserDto AddUser(UserDto userDto)
     {
         var userEntity = _mapper.Map<User>(userDto);

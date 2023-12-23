@@ -36,7 +36,7 @@ public class UserController : ControllerBase
                 _logger.LogWarning("No users found.");
                 return NotFound("No users found.");
             }
-            _logger.LogInformation("Successfully retrieved all vacancies.");
+            _logger.LogInformation("Successfully retrieved all users.");
 
             return Ok(usersDto);
         }
@@ -184,7 +184,7 @@ public class UserController : ControllerBase
                 return BadRequest("Invalid user ID format.");
             }
 
-            // Check if the vacancy exists
+            // Check if the user exists
             var existingUser = _userService.GetUserById(userId);
             if (existingUser == null)
             {
