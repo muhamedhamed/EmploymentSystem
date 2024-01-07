@@ -52,10 +52,10 @@ To Run the Project:
 - Additional Apis are created as it as mentioned was the first time for me to create that structure so I wanted to work will some generic Apis first before going into the business need.
 
 I will add some fixes to the project and work on some business requirements in the task but as I told you before.
-Fix Serilog Configurations
-Permission Issue with Update and Delete
-Swagger --> Token Section
-Apply Soft Delete
-Audit Columns on Database
-Add Background services as Hangfire to expire the Vacancy
-Redis 
+- Fix Serilog Configurations
+- Permission Issue with Update and Delete
+- Swagger --> Token Section
+- Apply Soft Delete
+- Audit Columns on Database
+- Add Background services as Hangfire to expire the Vacancy
+- Redis 
