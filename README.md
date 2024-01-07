@@ -7,7 +7,7 @@ Here's the structure that my solution goes through:
 2. **Application Layer (`EmploymentSystem.Application`):**
     - Define DTOs (Data Transfer Objects) for communication between my application and the Presentation layer (API).
     - Define service interfaces (e.g., **`IUserService`**, **`IVacancyService`**, **`IApplicationService`**) that encapsulate the application logic.
-    - The interfaces defined here are simple and just cover basic processes to the application
+    - The interfaces defined here are simple and just cover the basic processes of the application
     - Implement service classes that use the repository interfaces from the domain layer.
     - Implement AutoMapper to map between entities and DTOs.
 3. **Infrastructure Layer (`EmploymentSystem.Infrastructure`):**
