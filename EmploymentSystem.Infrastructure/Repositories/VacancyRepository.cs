@@ -13,13 +13,13 @@ private readonly AppDbContext _context;
         _context = context;
     }
 
-    public IEnumerable<ApplicationVacancy> GetApplicationsByVacancy(string vacancyId)
+    public async Task<IEnumerable<ApplicationVacancy>> GetApplicationsByVacancyAsync(string vacancyId)
     {
-        var vacancies = _context.Vacancies
+        var vacancies =await _context.Vacancies
             .Include(v => v.Applications)
             .Where(v => v.VacancyId == vacancyId)
             .SelectMany(v => v.Applications)
-            .ToList();
+            .ToListAsync();
 
         return vacancies;
     }

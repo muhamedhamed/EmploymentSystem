@@ -4,14 +4,13 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IVacancyService
 {
-    VacancyDto GetVacancyById(string vacancyId);
-    IEnumerable<VacancyDto> GetAllVacancies();
-    VacancyDto CreateVacancy(VacancyDto vacancy);
-    VacancyDto UpdateVacancy(VacancyDto vacancyDto, string vacancyId);
-    void DeleteVacancy(string vacancyId);
+    Task<VacancyDto> GetVacancyByIdAsync(string vacancyId);
+    Task<IEnumerable<VacancyDto>> GetAllVacanciesAsync();
+    Task<VacancyDto> CreateVacancyAsync(VacancyDto vacancy);
+    Task<VacancyDto> UpdateVacancyAsync(VacancyDto vacancyDto, string vacancyId);
+    Task DeleteVacancyAsync(string vacancyId);
 
-    IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(string vacancyId);
-    // IEnumerable<VacancyDto> GetActiveVacancies();
-    // IEnumerable<VacancyDto> GetVacanciesByEmployer(int employerId);
-    // // Other methods related to vacancy management...
+    Task<IEnumerable<ApplicationVacancyDto>> GetApplicationsByVacancyAsync(string vacancyId);
+    // Task<IEnumerable<VacancyDto>> GetActiveVacanciesAsync();
+    // Task<IEnumerable<VacancyDto>> GetVacanciesByEmployerAsync(int employerId);
 }

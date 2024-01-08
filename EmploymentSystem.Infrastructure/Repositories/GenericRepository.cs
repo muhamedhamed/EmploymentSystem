@@ -14,30 +14,32 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         _dbSet = dbContext.Set<TEntity>();
     }
 
-    public IEnumerable<TEntity> GetAll()
+    public async Task<IEnumerable<TEntity>> GetAllAsync()
     {
-        return _dbSet.ToList();
+        return await _dbSet.ToListAsync();
     }
 
-    public TEntity GetById(string id)
+    public async Task<TEntity> GetByIdAsync(string id)
     {
-        return _dbSet.Find(id);
+        return await _dbSet.FindAsync(id);
     }
-    public TEntity Add(TEntity entity)
+
+    public async Task<TEntity> AddAsync(TEntity entity)
     {
-        _dbSet.Add(entity);
+        await _dbSet.AddAsync(entity);
         return entity;
     }
 
-    public TEntity Update(TEntity entity)
+    public async Task<TEntity> UpdateAsync(TEntity entity)
     {
-        // _dbSet.Attach(entity);
+        // not imprtant to make the update async 
+        // check again 
         _dbContext.Entry(entity).State = EntityState.Modified;
         return entity;
     }
 
-    public void Remove(TEntity entity)
+    public async Task RemoveAsync(TEntity entity)
     {
-        _dbContext.Set<TEntity>().Remove(entity);
+        _dbSet.Remove(entity);
     }
 }

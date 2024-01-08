@@ -12,8 +12,8 @@ namespace EmploymentSystem.Domain.Interfaces.Repositories
         public IUserRepository UserRepository { get; }
         public IVacancyRepository VacancyRepository { get; }
         public IApplicationVacancyRepository ApplicationVacancyRepository { get; }
-        void BeginTransaction();
-        void SaveChanges();
-        void CommitTransaction();
+        Task BeginTransactionAsync();
+        Task SaveChangesAsync();
+        Task CommitTransactionAsync();
     }
 }

@@ -4,7 +4,7 @@ namespace EmploymentSystem.Domain.Interfaces.Repositories;
 
 public interface IVacancyRepository : IGenericRepository<Vacancy>
 {
-    IEnumerable<ApplicationVacancy> GetApplicationsByVacancy(string vacancyId);
+    Task<IEnumerable<ApplicationVacancy>> GetApplicationsByVacancyAsync(string vacancyId);
     // IEnumerable<Vacancy> GetActiveVacancies();
     // IEnumerable<Vacancy> GetVacanciesByEmployer(int employerId);
 }

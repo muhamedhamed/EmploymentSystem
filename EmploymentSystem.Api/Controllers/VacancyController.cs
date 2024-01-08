@@ -24,14 +24,14 @@ public class VacancyController : ControllerBase
 
     [HttpGet]
     [ActionName("GetAllVacancies")]
-    public IActionResult GetAllVacancies()
+    public async Task<IActionResult> GetAllVacancies()
     {
         try
         {
             _logger.LogInformation("Attempting to retrieve all vacancies.");
 
-            var vacanciesDto = _vacancyService.GetAllVacancies();
-            if (vacanciesDto == null || !vacanciesDto.Any())
+            var vacanciesDto =await _vacancyService.GetAllVacanciesAsync();
+            if (vacanciesDto == null)
             {
                 _logger.LogWarning("No vacancies found.");
                 return NotFound("No vacancies found.");
@@ -50,7 +50,7 @@ public class VacancyController : ControllerBase
     [HttpGet("{vacancyId}")]
     [ActionName("GetVacancyById")]
     [Authorize(Roles = "Employer")]
-    public IActionResult GetVacancyById(string vacancyId)
+    public async Task<IActionResult> GetVacancyById(string vacancyId)
     {
         try
         {
@@ -62,7 +62,7 @@ public class VacancyController : ControllerBase
                 return BadRequest("Invalid vacancy ID format.");
             }
 
-            var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
+            var vacancyDto =await _vacancyService.GetVacancyByIdAsync(vacancyId);
             if (vacancyDto == null)
             {
                 _logger.LogWarning($"Vacancy with ID: {vacancyId} not found.");
@@ -82,7 +82,7 @@ public class VacancyController : ControllerBase
     [HttpPost]
     [ActionName("CreateVacancy")]
     [Authorize(Roles = "Employer")]
-    public IActionResult CreateVacancy([FromBody] VacancyDto vacancyDto)
+    public async Task<IActionResult> CreateVacancy([FromBody] VacancyDto vacancyDto)
     {
         try
         {
@@ -102,7 +102,7 @@ public class VacancyController : ControllerBase
                 return BadRequest(ModelState);
             }
 
-            var result = _vacancyService.CreateVacancy(vacancyDto);
+            var result =await _vacancyService.CreateVacancyAsync(vacancyDto);
 
             _logger.LogInformation($"Successfully created a new vacancy with ID: {result.VacancyId}");
             return CreatedAtAction(nameof(CreateVacancy), result);
@@ -117,7 +117,7 @@ public class VacancyController : ControllerBase
     [HttpPut("{vacancyId}")]
     [ActionName("UpdateVacancy")]
     [Authorize(Roles = "Employer")]
-    public IActionResult UpdateVacancy(string vacancyId, [FromBody] VacancyDto vacancyDto)
+    public async Task<IActionResult> UpdateVacancy(string vacancyId, [FromBody] VacancyDto vacancyDto)
     {
         try
         {
@@ -144,7 +144,7 @@ public class VacancyController : ControllerBase
             }
 
             // Check if the vacancy exists
-            var existingVacancy = _vacancyService.GetVacancyById(vacancyId);
+            var existingVacancy =await _vacancyService.GetVacancyByIdAsync(vacancyId);
             if (existingVacancy == null)
             {
                 _logger.LogError($"Vacancy with ID {vacancyId} not found.");
@@ -159,7 +159,7 @@ public class VacancyController : ControllerBase
             }
 
             // Update the vacancy
-            _vacancyService.UpdateVacancy(vacancyDto, vacancyId);
+            await _vacancyService.UpdateVacancyAsync(vacancyDto, vacancyId);
 
             _logger.LogInformation($"Successfully updated vacancy with ID: {vacancyId}");
             return NoContent();
@@ -174,7 +174,7 @@ public class VacancyController : ControllerBase
     [HttpDelete("{vacancyId}")]
     [ActionName("DeleteVacancy")]
     [Authorize(Roles = "Employer")]
-    public IActionResult DeleteVacancy(string vacancyId)
+    public async Task<IActionResult> DeleteVacancy(string vacancyId)
     {
         try
         {
@@ -187,7 +187,7 @@ public class VacancyController : ControllerBase
             }
 
             // Check if the vacancy exists
-            var existingVacancy = _vacancyService.GetVacancyById(vacancyId);
+            var existingVacancy =await _vacancyService.GetVacancyByIdAsync(vacancyId);
             if (existingVacancy == null)
             {
                 _logger.LogError($"Vacancy with ID {vacancyId} not found.");
@@ -202,7 +202,7 @@ public class VacancyController : ControllerBase
             }
 
             // Delete the vacancy
-            _vacancyService.DeleteVacancy(vacancyId);
+            await _vacancyService.DeleteVacancyAsync(vacancyId);
 
             _logger.LogInformation($"Successfully deleted vacancy with ID: {vacancyId}");
             return NoContent();
@@ -218,7 +218,7 @@ public class VacancyController : ControllerBase
     [HttpGet("{vacancyId}/applications")]
     [ActionName("GetApplicationsPerVacancy")]
     [Authorize(Roles = "Employer")]
-    public IActionResult GetApplicationsPerVacancy(string vacancyId)
+    public async Task<IActionResult> GetApplicationsPerVacancy(string vacancyId)
     {
         try
         {
@@ -230,7 +230,7 @@ public class VacancyController : ControllerBase
 
             _logger.LogInformation($"Attempting to retrieve list of applications per vacancy with vecency ID: {vacancyId}");
 
-            var vacancyDto = _vacancyService.GetVacancyById(vacancyId);
+            var vacancyDto =await _vacancyService.GetVacancyByIdAsync(vacancyId);
             if (vacancyDto == null)
             {
                 _logger.LogWarning($"Vacancy with ID: {vacancyId} not found.");
@@ -238,7 +238,7 @@ public class VacancyController : ControllerBase
             }
             _logger.LogInformation($"Successfully retrieved vacancy with ID: {vacancyId}");
 
-            var applications = _vacancyService.GetApplicationsByVacancy(vacancyId);
+            var applications = await _vacancyService.GetApplicationsByVacancyAsync(vacancyId);
             if (applications == null)
             {
                 _logger.LogWarning($"Vacancy with ID: {vacancyId} hasn't application yet.");

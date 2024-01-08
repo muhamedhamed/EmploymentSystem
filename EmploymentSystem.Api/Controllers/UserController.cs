@@ -24,14 +24,14 @@ public class UserController : ControllerBase
 
     [HttpGet]
     [ActionName("GetAllUsers")]
-    public IActionResult GetAllUsers()
+    public async Task<IActionResult> GetAllUsers()
     {
         try
         {
             _logger.LogInformation("Attempting to retrieve all users.");
 
-            var usersDto = _userService.GetAllUsers();
-            if (usersDto == null || !usersDto.Any())
+            var usersDto = _userService.GetAllUsersAsync();
+            if (usersDto == null)
             {
                 _logger.LogWarning("No users found.");
                 return NotFound("No users found.");
@@ -49,7 +49,7 @@ public class UserController : ControllerBase
 
     [HttpGet("{userId}")]
     [ActionName("GetUserById")]
-    public IActionResult GetUserById(string userId)
+    public async Task<IActionResult> GetUserById(string userId)
     {
         try
         {
@@ -61,7 +61,7 @@ public class UserController : ControllerBase
                 return BadRequest("Invalid user ID format.");
             }
 
-            var userDto = _userService.GetUserById(userId);
+            var userDto = await _userService.GetUserByIdAsync(userId);
 
             if (userDto == null)
             {
@@ -81,7 +81,7 @@ public class UserController : ControllerBase
 
     [HttpPost, Route("register")]
     [ActionName("AddUser")]
-    public IActionResult AddUser([FromBody] UserDto userDto)
+    public async Task<IActionResult> AddUser([FromBody] UserDto userDto)
     {
         try
         {
@@ -101,7 +101,7 @@ public class UserController : ControllerBase
                 return BadRequest(ModelState);
             }
 
-            var result = _userService.AddUser(userDto);
+            var result = await _userService.AddUserAsync(userDto);
 
             _logger.LogInformation($"Successfully created a new user with ID: {result.UserId}");
             return CreatedAtAction(nameof(AddUser), result);
@@ -116,7 +116,7 @@ public class UserController : ControllerBase
     [HttpPut("{userId}")]
     [ActionName("UpdateUser")]
     [Authorize]
-    public IActionResult UpdateUser(string userId, [FromBody] UserDto userDto)
+    public async Task<IActionResult> UpdateUser(string userId, [FromBody] UserDto userDto)
     {
         try
         {
@@ -143,7 +143,7 @@ public class UserController : ControllerBase
             }
 
             // Check if the vacancy exists
-            var existingUser = _userService.GetUserById(userId);
+            var existingUser =await _userService.GetUserByIdAsync(userId);
             if (existingUser == null)
             {
                 _logger.LogError($"User with ID {userId} not found.");
@@ -157,7 +157,7 @@ public class UserController : ControllerBase
                 return Forbid("User does not have permission to update this user info.");
             }
             // Update the user
-            _userService.UpdateUser(userDto, userId);
+            await _userService.UpdateUserAsync(userDto, userId);
 
             _logger.LogInformation($"Successfully updated user with ID: {userId}");
             return NoContent();
@@ -172,7 +172,7 @@ public class UserController : ControllerBase
     [HttpDelete("{userId}")]
     [ActionName("DeleteUser")]
     [Authorize]
-    public IActionResult DeleteUser(string userId)
+    public async Task<IActionResult> DeleteUser(string userId)
     {
         try
         {
@@ -185,7 +185,7 @@ public class UserController : ControllerBase
             }
 
             // Check if the user exists
-            var existingUser = _userService.GetUserById(userId);
+            var existingUser =await _userService.GetUserByIdAsync(userId);
             if (existingUser == null)
             {
                 _logger.LogError($"User with ID {userId} not found.");
@@ -200,7 +200,7 @@ public class UserController : ControllerBase
             }
 
             // Delete the user
-            _userService.DeleteUser(userId);
+           await _userService.DeleteUserAsync(userId);
 
             _logger.LogInformation($"Successfully deleted user with ID: {userId}");
             return NoContent();
@@ -213,13 +213,13 @@ public class UserController : ControllerBase
     }
 
     [HttpGet, Route("login")]
-    public IActionResult Login([FromBody] UserLoginDto userLoginDto)
+    public async Task<IActionResult> Login([FromBody] UserLoginDto userLoginDto)
     {
         try
         {
             _logger.LogInformation($"Attempting to login user with email: {userLoginDto.Email}");
 
-            var result = _userService.Authenticate(userLoginDto.Email, userLoginDto.Password);
+            var result =await _userService.AuthenticateAsync(userLoginDto.Email, userLoginDto.Password);
             if (result == null)
             {
                 _logger.LogWarning($"User with email: {userLoginDto.Email} not found.");

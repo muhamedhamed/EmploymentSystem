@@ -13,9 +13,11 @@ public class ApplicationVacancyRepository : GenericRepository<ApplicationVacancy
         _context = context;
     }
 
-    // public IEnumerable<ApplicationVacancy> GetApplicationsByApplicant(int applicantId)
-    // {
-    //     throw new NotImplementedException();
-    // }
+    //public async Task<IEnumerable<ApplicationVacancy>> GetApplicationsByApplicantAsync(int applicantId)
+    //{
+    //    return await _context.ApplicationVacancies
+    //        .Where(app => app.ApplicantId == applicantId)
+    //        .ToListAsync();
+    //}
 }
 

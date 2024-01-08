@@ -4,13 +4,12 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IApplicationVacancyService
 {
-    ApplicationVacancyDto GetApplicationById(string applicationId);
-    ApplicationVacancyDto ApplyForVacancy(ApplicationVacancyDto applicationDto);
-    ApplicationVacancyDto UpdateApplication(ApplicationVacancyDto applicationDto,string applicationId);
-    void WithdrawApplication(string applicationId);
+    Task<ApplicationVacancyDto> GetApplicationByIdAsync(string applicationId);
+    Task<ApplicationVacancyDto?> ApplyForVacancyAsync(ApplicationVacancyDto applicationDto);
+    Task<ApplicationVacancyDto> UpdateApplicationAsync(ApplicationVacancyDto applicationDto, string applicationId);
+    Task WithdrawApplicationAsync(string applicationId);
 
-    // IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(int vacancyId);
-    // IEnumerable<ApplicationVacancyDto> GetApplicationsByApplicant(int applicantId);
-    // IEnumerable<ApplicationVacancyDto> GetApplicationsByUser(int userId);
-    // // Other methods related to application vacancy management...
+    // Task<IEnumerable<ApplicationVacancyDto>> GetApplicationsByVacancyAsync(int vacancyId);
+    // Task<IEnumerable<ApplicationVacancyDto>> GetApplicationsByApplicantAsync(int applicantId);
+    // Task<IEnumerable<ApplicationVacancyDto>> GetApplicationsByUserAsync(int userId);
 }

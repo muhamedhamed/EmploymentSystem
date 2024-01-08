@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using EmploymentSystem.Application.Dtos;
 using EmploymentSystem.Application.Interfaces;
 using EmploymentSystem.Domain.Entities;
@@ -23,56 +17,63 @@ public class VacancyService : IVacancyService
         _mapper = mapper;
     }
 
-    public VacancyDto GetVacancyById(string vacancyId)
+    public async  Task<VacancyDto> GetVacancyByIdAsync(string vacancyId)
     {
-        var vacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
-        return _mapper.Map<VacancyDto>(vacancyEntity);
+        var vacancyEntity =await  _unitOfWork.VacancyRepository.GetByIdAsync(vacancyId);
+        var vacancyDto = _mapper.Map<VacancyDto>(vacancyEntity);
+        return vacancyDto;
     }
 
-    public IEnumerable<VacancyDto> GetAllVacancies()
+    public async Task<IEnumerable<VacancyDto>> GetAllVacanciesAsync()
     {
-        var vacanciesEntities = _unitOfWork.VacancyRepository.GetAll();
-        return _mapper.Map<IEnumerable<VacancyDto>>(vacanciesEntities);
+        var vacanciesEntities = await _unitOfWork.VacancyRepository.GetAllAsync();
+        var vacanciesDto = _mapper.Map<IEnumerable<VacancyDto>>(vacanciesEntities);
+        return vacanciesDto;
     }
 
-    public VacancyDto CreateVacancy(VacancyDto vacancyDto)
+    public async Task<VacancyDto> CreateVacancyAsync(VacancyDto vacancyDto)
     {
         var vacancyEntity = _mapper.Map<Vacancy>(vacancyDto);
         vacancyEntity.CreatedAt = DateTime.Now;
         vacancyEntity.UpdatedAt = DateTime.Now;
-        _unitOfWork.VacancyRepository.Add(vacancyEntity);
 
-        _unitOfWork.SaveChanges();
+        await _unitOfWork.VacancyRepository.AddAsync(vacancyEntity);
+        await _unitOfWork.SaveChangesAsync();
+
         return vacancyDto;
     }
 
-    public VacancyDto UpdateVacancy(VacancyDto vacancyDto, string vacancyId)
+    public async Task<VacancyDto> UpdateVacancyAsync(VacancyDto vacancyDto, string vacancyId)
     {
-        var existingVacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
+        var existingVacancyEntity =await  _unitOfWork.VacancyRepository.GetByIdAsync(vacancyId);
 
         _mapper.Map(vacancyDto, existingVacancyEntity);
-        existingVacancyEntity.UpdatedAt = DateTime.Now;
-        _unitOfWork.VacancyRepository.Update(existingVacancyEntity);
-        _unitOfWork.SaveChanges();
 
-        return _mapper.Map<VacancyDto>(existingVacancyEntity);
+        existingVacancyEntity.UpdatedAt = DateTime.Now;
+
+        await _unitOfWork.VacancyRepository.UpdateAsync(existingVacancyEntity);
+        await _unitOfWork.SaveChangesAsync();
+
+        var updatedVacancy = _mapper.Map<VacancyDto>(existingVacancyEntity);
+
+        return updatedVacancy;
     }
 
-    public void DeleteVacancy(string vacancyId)
+    public async Task DeleteVacancyAsync(string vacancyId)
     {
-        var vacancyEntity = _unitOfWork.VacancyRepository.GetById(vacancyId);
+        var vacancyEntity =await _unitOfWork.VacancyRepository.GetByIdAsync(vacancyId);
         if (vacancyEntity != null)
         {
-            _unitOfWork.VacancyRepository.Remove(vacancyEntity);
-            _unitOfWork.SaveChanges();
+            await _unitOfWork.VacancyRepository.RemoveAsync(vacancyEntity);
+            await _unitOfWork.SaveChangesAsync();
         }
-        // Handle case when the vacancy doesn't exist or other business logic.
     }
 
-    public IEnumerable<ApplicationVacancyDto> GetApplicationsByVacancy(string vacancyId)
+    public async Task<IEnumerable<ApplicationVacancyDto>> GetApplicationsByVacancyAsync(string vacancyId)
     {
-        var applicationsByVacancyList = _unitOfWork.VacancyRepository
-                                .GetApplicationsByVacancy(vacancyId);
+        var applicationsByVacancyList =await _unitOfWork.VacancyRepository
+                                .GetApplicationsByVacancyAsync(vacancyId);
+
         var applicationsList = _mapper.Map<IEnumerable<ApplicationVacancyDto>>(applicationsByVacancyList);
         return applicationsList;
     }

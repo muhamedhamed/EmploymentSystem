@@ -23,7 +23,7 @@ public class ApplicationVacancyController : ControllerBase
 
     [HttpGet("{applicationId}")]
     [ActionName("GetApplicationById")]
-    public IActionResult GetApplicationById(string applicationId)
+    public async Task<IActionResult> GetApplicationById(string applicationId)
     {
         try
         {
@@ -32,7 +32,7 @@ public class ApplicationVacancyController : ControllerBase
                 _logger.LogError("Invalid applicationId. It cannot be null or empty.");
                 return BadRequest("Invalid applicationId.");
             }
-            var applicationDto = _applicationVacancyService.GetApplicationById(applicationId);
+            var applicationDto = await _applicationVacancyService.GetApplicationByIdAsync(applicationId);
             if (applicationDto == null)
             {
                 _logger.LogError($"Application with Id : {applicationDto.ApplicationVacancyId} Not Found");
@@ -52,7 +52,7 @@ public class ApplicationVacancyController : ControllerBase
     [ActionName("ApplyForVacancy")]
     [Authorize(AuthenticationSchemes = "Bearer")]
     [Authorize(Roles = "Applicant")]
-    public IActionResult ApplyForVacancy([FromBody] ApplicationVacancyDto applicationDto)
+    public async Task<IActionResult> ApplyForVacancy([FromBody] ApplicationVacancyDto applicationDto)
     {
         try
         {
@@ -71,7 +71,7 @@ public class ApplicationVacancyController : ControllerBase
             }
 
             // Apply for vacancy and return CreatedAtAction result if successful
-            var result = _applicationVacancyService.ApplyForVacancy(applicationDto);
+            var result = await _applicationVacancyService.ApplyForVacancyAsync(applicationDto);
                         // Validate if the request body is null or empty
             if (result == null)
             {
@@ -93,7 +93,7 @@ public class ApplicationVacancyController : ControllerBase
     [ActionName("UpdateApplication")]
     [Authorize(Roles = "Applicant")]
     [Authorize(AuthenticationSchemes = "Bearer")]
-    public IActionResult UpdateApplication(string applicationId, [FromBody] ApplicationVacancyDto applicationDto)
+    public async Task<IActionResult> UpdateApplication(string applicationId, [FromBody] ApplicationVacancyDto applicationDto)
     {
         try
         {
@@ -117,7 +117,7 @@ public class ApplicationVacancyController : ControllerBase
                 return BadRequest(ModelState);
             }
 
-            var existingApplication = _applicationVacancyService.GetApplicationById(applicationId);
+            var existingApplication = await _applicationVacancyService.GetApplicationByIdAsync(applicationId);
             if (existingApplication == null)
             {
                 _logger.LogError($"Application with ID {applicationId} not found.");
@@ -131,7 +131,7 @@ public class ApplicationVacancyController : ControllerBase
                 return Forbid("User does not have permission to update this application.");
             }
 
-            _applicationVacancyService.UpdateApplication(applicationDto, applicationId);
+            await _applicationVacancyService.UpdateApplicationAsync(applicationDto, applicationId);
             _logger.LogInformation("Application updated successfully.");
             return NoContent();
         }
@@ -146,7 +146,7 @@ public class ApplicationVacancyController : ControllerBase
     [ActionName("WithdrawApplication")]
     [Authorize(Roles = "Applicant")]
     [Authorize(AuthenticationSchemes = "Bearer")]
-    public IActionResult WithdrawApplication(string applicationId)
+    public async Task<IActionResult> WithdrawApplication(string applicationId)
     {
         try
         {
@@ -156,7 +156,7 @@ public class ApplicationVacancyController : ControllerBase
                 return BadRequest("Invalid application ID format.");
             }
 
-            var existingApplication = _applicationVacancyService.GetApplicationById(applicationId);
+            var existingApplication =await _applicationVacancyService.GetApplicationByIdAsync(applicationId);
             if (existingApplication == null)
             {
                 _logger.LogError($"Application with ID {applicationId} not found.");
@@ -170,7 +170,7 @@ public class ApplicationVacancyController : ControllerBase
                 return Forbid("User does not have permission to update this application.");
             }
 
-            _applicationVacancyService.WithdrawApplication(applicationId);
+            await _applicationVacancyService.WithdrawApplicationAsync(applicationId);
             _logger.LogInformation("Application deleted successfully.");
             return NoContent();
         }

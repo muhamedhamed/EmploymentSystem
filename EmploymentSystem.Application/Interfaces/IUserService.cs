@@ -4,14 +4,13 @@ namespace EmploymentSystem.Application.Interfaces;
 
 public interface IUserService
 {
-    UserDto GetUserById(string userId);
-    IEnumerable<UserDto> GetAllUsers();
-    UserDto AddUser(UserDto userDto);
-    UserDto UpdateUser(UserDto userDto,string userId);
-    void DeleteUser(string userId);
-    UserDto GetUserByEmailAndPassword(string email, string password, out string userId);
-    AuthResult Authenticate(string email, string password);
-    // UserDto GetUserByUsername(string username);
-    // IEnumerable<UserDto> GetUsersByRole(UserDto role);
-    // // Other methods related to user management...
+    Task<UserDto> GetUserByIdAsync(string userId);
+    Task<IEnumerable<UserDto>> GetAllUsersAsync();
+    Task<UserDto> AddUserAsync(UserDto userDto);
+    Task<UserDto> UpdateUserAsync(UserDto userDto, string userId);
+    Task DeleteUserAsync(string userId);
+    Task<(UserDto user, string userId)> GetUserByEmailAndPasswordAsync(string email, string password);
+    Task<AuthResult> AuthenticateAsync(string email, string password);
+    // Task<UserDto> GetUserByUsernameAsync(string username);
+    // Task<IEnumerable<UserDto>> GetUsersByRoleAsync(UserDto role);
 }

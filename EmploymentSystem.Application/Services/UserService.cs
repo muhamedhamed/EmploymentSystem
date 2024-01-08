@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using AutoMapper;
 using EmploymentSystem.Application.Dtos;
 using EmploymentSystem.Application.Interfaces;
@@ -12,7 +8,6 @@ using EmploymentSystem.Domain.Entities;
 using EmploymentSystem.Domain.Interfaces.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
-using System.Data.Common;
 
 
 namespace EmploymentSystem.Application.Services;
@@ -37,71 +32,68 @@ public class UserService : IUserService
         _configuration = configuration;
     }
 
-    public UserDto GetUserById(string userId)
+    public async Task<UserDto> GetUserByIdAsync(string userId)
     {
-        var userEntity = _unitOfWork.UserRepository.GetById(userId);
-        return _mapper.Map<UserDto>(userEntity);
+        var userEntity = await _unitOfWork.UserRepository.GetByIdAsync(userId);
+        return  _mapper.Map<UserDto>(userEntity);
     }
 
-    public IEnumerable<UserDto> GetAllUsers()
+    public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
     {
-        var usersEntities = _unitOfWork.UserRepository.GetAll();
+        var usersEntities =await  _unitOfWork.UserRepository.GetAllAsync();
         return _mapper.Map<IEnumerable<UserDto>>(usersEntities);
     }
     
-    public UserDto AddUser(UserDto userDto)
+    public async Task<UserDto> AddUserAsync(UserDto userDto)
     {
         var userEntity = _mapper.Map<User>(userDto);
         userEntity.CreatedAt = DateTime.Now;
         userEntity.UpdatedAt = DateTime.Now;
-        _unitOfWork.UserRepository.Add(userEntity);
-        _unitOfWork.SaveChanges();
+
+        await _unitOfWork.UserRepository.AddAsync(userEntity);
+        await _unitOfWork.SaveChangesAsync();
         return userDto;
     }
 
-    public UserDto UpdateUser(UserDto userDto, string userId)
+    public async Task<UserDto> UpdateUserAsync(UserDto userDto, string userId)
     {
         // Ad more validation
-        var existingUserEntity = _unitOfWork.UserRepository.GetById(userId);
+        var existingUserEntity =await _unitOfWork.UserRepository.GetByIdAsync(userId);
         _mapper.Map(userDto, existingUserEntity);
         existingUserEntity.UpdatedAt = DateTime.Now;
-        _unitOfWork.UserRepository.Update(existingUserEntity);
-        _unitOfWork.SaveChanges();
+        await _unitOfWork.UserRepository.UpdateAsync(existingUserEntity);
+        await _unitOfWork.SaveChangesAsync();
 
         return _mapper.Map<UserDto>(existingUserEntity);
-        // Handle case when the user doesn't exist or other business logic.
     }
 
-    public void DeleteUser(string userId)
+    public async Task DeleteUserAsync(string userId)
     {
-        var userEntity = _unitOfWork.UserRepository.GetById(userId);
+        var userEntity = await _unitOfWork.UserRepository.GetByIdAsync(userId);
         if (userEntity != null)
         {
-            _unitOfWork.UserRepository.Remove(userEntity);
-            _unitOfWork.SaveChanges();
+            await _unitOfWork.UserRepository.RemoveAsync(userEntity);
+            await _unitOfWork.SaveChangesAsync();
         }
     }
 
 
 
-    public AuthResult Authenticate(string email, string password)
+    public async Task<AuthResult> AuthenticateAsync(string email, string password)
     {
-        // Your authentication logic here
-        // If authentication is successful, generate a JWT token
-        // You can use libraries like System.IdentityModel.Tokens.Jwt for token generation
-        string userId;
-        var user = GetUserByEmailAndPassword(email, password, out userId);
+        var (user, userId) =await GetUserByEmailAndPasswordAsync(email, password);
 
         var token = GenerateJwtToken(userId, email, password, user.Role);
 
         return new AuthResult { Success = true, Token = token };
     }
 
-    public UserDto GetUserByEmailAndPassword(string email, string password, out string userId)
+    public async Task<(UserDto user,string userId)> GetUserByEmailAndPasswordAsync(string email, string password)
     {
-        var userEntity = _unitOfWork.UserRepository.GetUserByEmailAndPassword(email, password);
-        userId = userEntity.UserId;
-        return _mapper.Map<UserDto>(userEntity);
+        var userEntity =await _unitOfWork.UserRepository.GetUserByEmailAndPasswordAsync(email, password);
+        var userId = userEntity.UserId;
+        var userDto = _mapper.Map<UserDto>(userEntity);
+        return (userDto, userId) ;
     }
 
     private string GenerateJwtToken(string userId, string email, string password, string role)

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EmploymentSystem.Domain.Entities;
 using EmploymentSystem.Domain.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmploymentSystem.Infrastructure.Repositories
 {
@@ -17,10 +18,11 @@ namespace EmploymentSystem.Infrastructure.Repositories
         {
             _context = context;
         }
-        public User GetUserByEmailAndPassword(string email, string password)
+        public async Task<User> GetUserByEmailAndPasswordAsync(string email, string password)
         {
             // Find the user by email and password
-            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+            // Handle null return
+            var user =await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
             return user;
         }

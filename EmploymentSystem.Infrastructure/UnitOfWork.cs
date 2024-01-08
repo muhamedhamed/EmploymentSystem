@@ -10,10 +10,15 @@ public class UnitOfWork : IUnitOfWork
     private readonly AppDbContext _dbContext;
     private IDbContextTransaction _transaction;
 
-    public UnitOfWork(AppDbContext dbContext,
-                         IUserRepository userRepository,
-                         IVacancyRepository vacancyRepository,
-                         IApplicationVacancyRepository applicationVacancyRepository)
+    public IUserRepository UserRepository { get; }
+    public IVacancyRepository VacancyRepository { get; }
+    public IApplicationVacancyRepository ApplicationVacancyRepository { get; }
+
+    public UnitOfWork(
+                        AppDbContext dbContext,
+                        IUserRepository userRepository,
+                        IVacancyRepository vacancyRepository,
+                        IApplicationVacancyRepository applicationVacancyRepository)
     {
         _dbContext = dbContext;
         UserRepository = userRepository;
@@ -21,21 +26,18 @@ public class UnitOfWork : IUnitOfWork
         ApplicationVacancyRepository = applicationVacancyRepository;
     }
 
-    public IUserRepository UserRepository { get; }
-    public IVacancyRepository VacancyRepository { get; }
-    public IApplicationVacancyRepository ApplicationVacancyRepository { get; }
+    public async Task BeginTransactionAsync()
+    {
+        _transaction =await _dbContext.Database.BeginTransactionAsync();
+    }
 
-    public void BeginTransaction()
+    public async Task SaveChangesAsync()
     {
-        _transaction = _dbContext.Database.BeginTransaction();
+        await _dbContext.SaveChangesAsync();
     }
-    public void SaveChanges()
+    public async Task CommitTransactionAsync()
     {
-        _dbContext.SaveChanges();
-    }
-    public void CommitTransaction()
-    {
-        _transaction.Commit();
+        await _transaction.CommitAsync();
         _transaction.Dispose();
     }
 
