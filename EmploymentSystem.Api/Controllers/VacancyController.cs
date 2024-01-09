@@ -154,7 +154,7 @@ public class VacancyController : ControllerBase
             if (existingVacancy.EmployerId != userId)
             {
                 _logger.LogError("User does not have permission to update this vacancy.");
-                return Forbid("User does not have permission to update this vacancy.");
+                return Unauthorized("User does not have permission to update this vacancy.");
             }
 
             // Update the vacancy
@@ -197,7 +197,7 @@ public class VacancyController : ControllerBase
             if (existingVacancy.EmployerId != userId)
             {
                 _logger.LogError("User does not have permission to delete this vacancy.");
-                return Forbid("User does not have permission to delete this vacancy.");
+                return Unauthorized("User does not have permission to delete this vacancy.");
             }
 
             // Delete the vacancy

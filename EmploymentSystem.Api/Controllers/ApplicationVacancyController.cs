@@ -128,7 +128,7 @@ public class ApplicationVacancyController : ControllerBase
             if (existingApplication.ApplicantId != userId)
             {
                 _logger.LogError("User does not have permission to update this application.");
-                return Forbid("User does not have permission to update this application.");
+                return Unauthorized("User does not have permission to update this application.");
             }
 
             await _applicationVacancyService.UpdateApplicationAsync(applicationDto, applicationId);
@@ -167,7 +167,7 @@ public class ApplicationVacancyController : ControllerBase
             if (existingApplication.ApplicantId != userId)
             {
                 _logger.LogError("User does not have permission to update this application.");
-                return Forbid("User does not have permission to update this application.");
+                return Unauthorized("User does not have permission to update this application.");
             }
 
             await _applicationVacancyService.WithdrawApplicationAsync(applicationId);
