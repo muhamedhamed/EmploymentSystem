@@ -33,13 +33,14 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
     public async Task<TEntity> UpdateAsync(TEntity entity)
     {
         // not imprtant to make the update async 
-        // check again 
+        // check again
         _dbContext.Entry(entity).State = EntityState.Modified;
         return entity;
     }
 
-    public async Task RemoveAsync(TEntity entity)
+    public void Remove(TEntity entity)
     {
-        _dbSet.Remove(entity);
+        //_dbSet.Remove(entity);
+        _dbContext.Set<TEntity>().Remove(entity);
     }
 }

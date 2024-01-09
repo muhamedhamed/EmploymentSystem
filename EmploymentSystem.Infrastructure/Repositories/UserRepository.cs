@@ -18,13 +18,16 @@ namespace EmploymentSystem.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<User> GetUserByEmailAndPasswordAsync(string email, string password)
+        public async Task<User?> GetUserByEmailAndPasswordAsync(string email, string password)
         {
             // Find the user by email and password
             // Handle null return
             var user =await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
-
-            return user;
+            if (user != null)
+            {
+                return user;
+            }
+            return null;
         }
     }
 }

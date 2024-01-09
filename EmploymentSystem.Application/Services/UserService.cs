@@ -1,12 +1,12 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AutoMapper;
 using EmploymentSystem.Application.Dtos;
 using EmploymentSystem.Application.Interfaces;
 using EmploymentSystem.Domain.Entities;
 using EmploymentSystem.Domain.Interfaces.Repositories;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 
 
@@ -72,7 +72,7 @@ public class UserService : IUserService
         var userEntity = await _unitOfWork.UserRepository.GetByIdAsync(userId);
         if (userEntity != null)
         {
-            await _unitOfWork.UserRepository.RemoveAsync(userEntity);
+            _unitOfWork.UserRepository.Remove(userEntity);
             await _unitOfWork.SaveChangesAsync();
         }
     }
@@ -88,6 +88,8 @@ public class UserService : IUserService
         return new AuthResult { Success = true, Token = token };
     }
 
+    // in the future I will remove the user id from userDto
+    // search for best practise for the DTO and userId and Password
     public async Task<(UserDto user,string userId)> GetUserByEmailAndPasswordAsync(string email, string password)
     {
         var userEntity =await _unitOfWork.UserRepository.GetUserByEmailAndPasswordAsync(email, password);

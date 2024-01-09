@@ -20,7 +20,7 @@ public class ApplicationVacancyService : IApplicationVacancyService
     private readonly IVacancyService _vacancyService;
 
     public ApplicationVacancyService(
-        IUnitOfWork unitOfWork, 
+        IUnitOfWork unitOfWork,
         IMapper mapper,
         IVacancyService vacancyService)
     {
@@ -34,14 +34,14 @@ public class ApplicationVacancyService : IApplicationVacancyService
         var applicationEntity = _mapper.Map<ApplicationVacancy>(applicationDto);
 
         //That part of the code need to be more organized
-        var vacancyEntity =await _unitOfWork.VacancyRepository.GetByIdAsync(applicationEntity.VacancyId);
-       
+        var vacancyEntity = await _unitOfWork.VacancyRepository.GetByIdAsync(applicationEntity.VacancyId);
+
         if (vacancyEntity == null)
         {
             return null;
         }
 
-        var applicationsByVacancyList =await _vacancyService.GetApplicationsByVacancyAsync(vacancyEntity.VacancyId);
+        var applicationsByVacancyList = await _vacancyService.GetApplicationsByVacancyAsync(vacancyEntity.VacancyId);
 
         int numberOfApplication = applicationsByVacancyList.Count();
 
@@ -61,7 +61,7 @@ public class ApplicationVacancyService : IApplicationVacancyService
 
     public async Task<ApplicationVacancyDto> GetApplicationByIdAsync(string applicationId)
     {
-        var applicationEntity =await  _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
+        var applicationEntity = await _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
         var applicationVacancyDto = _mapper.Map<ApplicationVacancyDto>(applicationEntity);
 
         return applicationVacancyDto;
@@ -69,7 +69,7 @@ public class ApplicationVacancyService : IApplicationVacancyService
 
     public async Task<ApplicationVacancyDto> UpdateApplicationAsync(ApplicationVacancyDto applicationDto, string applicationId)
     {
-        var existingApplicationEntity =await _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
+        var existingApplicationEntity = await _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
 
         if (existingApplicationEntity != null)
         {
@@ -89,12 +89,12 @@ public class ApplicationVacancyService : IApplicationVacancyService
     public async Task WithdrawApplicationAsync(string applicationId)
     {
         //Need Handle case when the application doesn't exist or other business logic.
-        var applicationEntity =await _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
+        var applicationEntity = await _unitOfWork.ApplicationVacancyRepository.GetByIdAsync(applicationId);
         if (applicationEntity != null)
         {
             applicationEntity.UpdatedAt = DateTime.Now;
 
-            await _unitOfWork.ApplicationVacancyRepository.RemoveAsync(applicationEntity);
+            _unitOfWork.ApplicationVacancyRepository.Remove(applicationEntity);
             await _unitOfWork.SaveChangesAsync();
         }
     }

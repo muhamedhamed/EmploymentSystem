@@ -9,6 +9,7 @@ using EmploymentSystem.Application.Mapper;
 using Serilog;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 Log.Logger = new LoggerConfiguration()
@@ -87,6 +88,11 @@ builder.Services.AddAuthorization(options =>
     {
         policy.RequireAuthenticatedUser();
         policy.RequireClaim("role", "Applicant");
+    });
+    options.AddPolicy("User", policy =>
+    {
+        policy.AuthenticationSchemes.Add(JwtBearerDefaults.AuthenticationScheme);
+        policy.RequireAuthenticatedUser();
     });
     //     // I will that Admin Policy as future update as it will need some refactor
     //     options.AddPolicy("Admin", policy =>

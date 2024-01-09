@@ -49,7 +49,6 @@ public class VacancyController : ControllerBase
 
     [HttpGet("{vacancyId}")]
     [ActionName("GetVacancyById")]
-    [Authorize(Roles = "Employer")]
     public async Task<IActionResult> GetVacancyById(string vacancyId)
     {
         try

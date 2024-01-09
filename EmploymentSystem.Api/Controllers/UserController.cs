@@ -30,7 +30,7 @@ public class UserController : ControllerBase
         {
             _logger.LogInformation("Attempting to retrieve all users.");
 
-            var usersDto = _userService.GetAllUsersAsync();
+            var usersDto =await  _userService.GetAllUsersAsync();
             if (usersDto == null)
             {
                 _logger.LogWarning("No users found.");
@@ -115,7 +115,7 @@ public class UserController : ControllerBase
 
     [HttpPut("{userId}")]
     [ActionName("UpdateUser")]
-    [Authorize]
+    [Authorize(Policy ="User")]
     public async Task<IActionResult> UpdateUser(string userId, [FromBody] UserDto userDto)
     {
         try
@@ -156,7 +156,7 @@ public class UserController : ControllerBase
                 _logger.LogError("User does not have permission to update this user info.");
                 return Forbid("User does not have permission to update this user info.");
             }
-            // Update the user
+
             await _userService.UpdateUserAsync(userDto, userId);
 
             _logger.LogInformation($"Successfully updated user with ID: {userId}");
@@ -171,7 +171,7 @@ public class UserController : ControllerBase
 
     [HttpDelete("{userId}")]
     [ActionName("DeleteUser")]
-    [Authorize]
+    [Authorize(Policy = "User")]
     public async Task<IActionResult> DeleteUser(string userId)
     {
         try
@@ -192,11 +192,12 @@ public class UserController : ControllerBase
                 return NotFound($"User with ID {userId} not found.");
             }
 
+            // Need to handle the not allowed expection fired here
             var userIdFromToken = User.Claims.FirstOrDefault(c => c.Type == "userId")?.Value;
             if (existingUser.UserId != userIdFromToken)
             {
                 _logger.LogError("User does not have permission to delete this user info.");
-                return Forbid("User does not have permission to delete this user info.");
+                return Unauthorized("User does not have permission to delete this user info.");
             }
 
             // Delete the user

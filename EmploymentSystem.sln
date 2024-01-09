@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{815BCC8A-8D1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B1FEFCA5-9E2E-4BE2-85CE-1B906376E9D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmploymentSystem.Domain", "EmploymentSystem.Domain\EmploymentSystem.Domain.csproj", "{1052EE11-2B73-4BA7-8404-F0B50A8B0281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmploymentSystem.Domain", "EmploymentSystem.Domain\EmploymentSystem.Domain.csproj", "{1052EE11-2B73-4BA7-8404-F0B50A8B0281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmploymentSystem.Application", "EmploymentSystem.Application\EmploymentSystem.Application.csproj", "{14BAA4A0-D77F-4766-B101-2965B7E79B60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmploymentSystem.Application", "EmploymentSystem.Application\EmploymentSystem.Application.csproj", "{14BAA4A0-D77F-4766-B101-2965B7E79B60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmploymentSystem.Infrastructure", "EmploymentSystem.Infrastructure\EmploymentSystem.Infrastructure.csproj", "{F3E3777D-7603-4C55-9C17-50A1FB749610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmploymentSystem.Infrastructure", "EmploymentSystem.Infrastructure\EmploymentSystem.Infrastructure.csproj", "{F3E3777D-7603-4C55-9C17-50A1FB749610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmploymentSystem.Api", "EmploymentSystem.Api\EmploymentSystem.Api.csproj", "{5B07D9C2-90A5-46BD-BC5E-917B3FD51F2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmploymentSystem.Api", "EmploymentSystem.Api\EmploymentSystem.Api.csproj", "{5B07D9C2-90A5-46BD-BC5E-917B3FD51F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
